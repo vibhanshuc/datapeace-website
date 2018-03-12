@@ -10,9 +10,11 @@
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-google-maps": "^9.4.5",
     "react-helmet": "^5.2.0",
     "react-icons": "^2.2.7",
-    "react-router-dom": "^4.2.2"
+    "react-router-dom": "^4.2.2",
+    "recompose": "^0.26.0"
   },
   "keywords": [
     "gatsby"
