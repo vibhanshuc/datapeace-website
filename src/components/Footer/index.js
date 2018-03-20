@@ -7,30 +7,22 @@ const linkStyle = {
   margin: '0 5px',
 };
 
-const Header = () => (
+const Footer = () => (
   <div
     style={{
       background: 'rebeccapurple',
+      padding: '1rem',
     }}
   >
     <div
       style={{
         display: 'flex',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
         alignItems: 'center',
         margin: '0 auto',
         maxWidth: 960,
       }}
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          href="/"
-          to="/"
-          style={linkStyle}
-        >
-          <img style={{ marginBottom: 0 }} alt="logo" height="80" src="https://dl.dropbox.com/s/7ucsv1m2jhpj68l/128x128_white.png" />
-        </Link>
-      </h1>
       <div>
         <Link
           href="/blog"
@@ -58,4 +50,4 @@ const Header = () => (
   </div>
 );
 
-export default Header;
+export default Footer;
