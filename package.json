@@ -6,7 +6,12 @@
   "dependencies": {
     "gatsby": "^1.9.223",
     "gatsby-link": "^1.6.38",
+    "gatsby-plugin-glamor": "^1.6.13",
     "gatsby-plugin-react-helmet": "^2.0.6",
+    "gatsby-plugin-typography": "^1.7.18",
+    "gatsby-source-filesystem": "^1.5.27",
+    "gatsby-transformer-remark": "^1.7.37",
+    "glamorous": "^4.12.1",
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
@@ -14,7 +19,9 @@
     "react-helmet": "^5.2.0",
     "react-icons": "^2.2.7",
     "react-router-dom": "^4.2.2",
-    "recompose": "^0.26.0"
+    "recompose": "^0.26.0",
+    "typography": "^0.16.6",
+    "typography-theme-kirkham": "^0.16.3"
   },
   "keywords": [
     "gatsby"

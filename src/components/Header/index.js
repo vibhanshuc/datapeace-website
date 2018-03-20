@@ -25,20 +25,30 @@ const Header = () => (
     >
       <h1 style={{ margin: 0 }}>
         <Link
+          href="/"
           to="/"
           style={linkStyle}
         >
-          <img height="80" src="https://dl.dropbox.com/s/7ucsv1m2jhpj68l/128x128_white.png" />
+          <img alt="logo" height="80" src="https://dl.dropbox.com/s/7ucsv1m2jhpj68l/128x128_white.png" />
         </Link>
       </h1>
       <div>
         <Link
+          href="/blog"
+          to="/blog"
+          style={linkStyle}
+        >
+          Blog
+        </Link>
+        <Link
+          href="/vision"
           to="/vision"
           style={linkStyle}
         >
           Vision
         </Link>
         <Link
+          href="/contact"
           to="/contact"
           style={linkStyle}
         >
