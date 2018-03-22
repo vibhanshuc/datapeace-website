@@ -1,6 +1,6 @@
-import React from 'react'
-import g from 'glamorous'
-import Link from 'gatsby-link'
+import React from 'react';
+import g from 'glamorous';
+import Link from 'gatsby-link';
 
 export default ({ data }) => (
   <div>
@@ -23,7 +23,7 @@ export default ({ data }) => (
       </div>
     ))}
   </div>
-)
+);
 
 export const query = graphql`
   query IndexQuery {
@@ -44,4 +44,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

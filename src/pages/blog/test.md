@@ -1,156 +1,29 @@
 ---
-title: "Test"
-date: "2017-08-10"
+templateKey: blog-post
+title: Making sense of the SCAA’s new Flavor Wheel
+date: 2016-12-17T15:04:10.000Z
+description: The Coffee Taster’s Flavor Wheel, the official resource used by coffee tasters, has been revised for the first time this year.
 ---
 
-In this section, you'll learn how to use the [`react-router`](https://github.com/ReactTraining/react-router) library with Relay to implement some navigation functionality!
+![flavor wheel](/img/flavor_wheel.jpg)
 
-### Routing in Relay
+The SCAA updated the wheel to reflect the finer nuances needed to describe flavors more precisely. The new descriptions are more detailed and hence allow cuppers to distinguish between more flavors.
 
-An interesting note about Relay is that it actually started out as a routing framework that eventually also got connected with data loading responsibilities. This was particularly visible in the design of Relay Classic, where [`Relay.Route`](https://facebook.github.io/relay/docs/api-reference-relay-route.html) was a core component. However with Relay Modern, the idea is to move away from having routing as an integral part of Relay and make it more flexible to work with different routing solutions.
+While this is going to be a big change for professional coffee tasters, it means a lot to you as a consumer as well. We’ll explain how the wheel came to be, how pros use it and what the flavors actually mean.
 
-Since we're in the early days of Relay Modern, there's not really much advise or conventions to build upon. The Facebook team delivers a [few suggestions](https://facebook.github.io/relay/docs/routing.html) how this can be handled. But it will certainly take some time until best practices and appropriate tools around this topic evolve!
+## What the updates mean to you
 
-So, to keep it simple in this tutorial, we'll use [`react-router`](https://github.com/ReactTraining/react-router) which is a popular routing solution in the React ecosystem.
+The Specialty Coffee Association of America (SCAA), founded in 1982, is a non-profit trade organization for the specialty coffee industry. With members located in more than 40 countries, SCAA represents every segment of the specialty coffee industry, including:
 
-### Install Dependencies
+* producers
+* roasters
+* importers/exporters
+* retailers
+* manufacturers
+* baristas
 
-The first thing you need to do is install the corresponding dependency.
+For over 30 years, SCAA has been dedicated to creating a vibrant specialty coffee community by recognizing, developing and promoting specialty coffee. SCAA sets and maintains quality standards for the industry, conducts market research, and provides education, training, resources, and business services for its members.
 
-<Instruction>
+Coffee cupping, or coffee tasting, is the practice of observing the tastes and aromas of brewed coffee. It is a professional practice but can be done informally by anyone or by professionals known as "Q Graders". A standard coffee cupping procedure involves deeply sniffing the coffee, then loudly slurping the coffee so it spreads to the back of the tongue.
 
-Open a terminal, navigate to your project directory and type:
-
-```bash(path=".../hackernews-react-relay")
-yarn add react-router-dom
-```
-
-</Instruction>
-
-
-### Create a Header
-
-Before you're moving on to configure the different routes for your application, you need to create a `Header` component that users can use to navigate to between the different parts of your app.
-
-Create a new file in `src/components` and call it `Header.js`. Then paste the following code inside of it:
-
-```js
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import { withRouter } from 'react-router'
-
-class Header extends Component {
-
-  render() {
-    return (
-      <div className='flex pa1 justify-between nowrap orange'>
-        <div className='flex flex-fixed black'>
-          <div className='fw7 mr1'>Hacker News</div>
-          <Link to='/' className='ml1 no-underline black'>new</Link>
-          <div className='ml1'>|</div>
-          <Link to='/create' className='ml1 no-underline black'>submit</Link>
-        </div>
-      </div>
-    )
-  }
-
-}
-
-export default withRouter(Header)
-```
-
-This simply renders two `Link` components that users can use to navigate between the `LinkList` and the `CreateLink` components.
-
-> Don't get confused by the "other" `Link` component that is used here. The one that you're using in the `Header` has nothing to do with the `Link` component that you wrote before, they just happen to have the same name. This [`Link`](https://github.com/ReactTraining/react-router/blob/master/packages/react-router-dom/docs/api/Link.md) stems from the `react-router-dom` package and allows you to navigate between routes inside of your application.
-
-### Setup routes
-
-You'll configure the different routes for the app in the project's root component: `App`.
-
-<Instruction>
-
-Open the corresponding file `App.js` and update `render` to include the `Header` as well as `LinkList` and the `CreateLink` components in different routes:
-
-```js(path=".../hackernews-react-relay/src/components/App.js")
-render() {
-  return (
-    <div className='center w85'>
-      <Header />
-      <div className='ph3 pv1 background-gray'>
-        <Switch>
-          <Route exact path='/' component={LinkListPage}/>
-          <Route exact path='/create' component={CreateLink}/>
-         </Switch>
-      </div>
-    </div>
-  )
-}
-```
-
-</Instruction>
-
-
-For this code to work, you need to import the required dependencies of `react-router`.
-
-<Instruction>
-
-Add the following statement to the top of the file:
-
-```js(path=".../hackernews-react-relay/src/components/App.js")
-import Header from './Header'
-import { Switch, Route } from 'react-router-dom'
-```
-
-</Instruction>
-
-Now you need to wrap the `App` with `BrowserRouter` so that all child components of `App` will get access to the routing functionality.
-
-<Instruction>
-
-Open `index.js` and add the following import statement to the top:
-
-```js(path=".../hackernews-react-relay/src/index.js")
-import { BrowserRouter } from 'react-router-dom'
-```
-
-</Instruction>
-
-<Instruction>
-
-Finally, still in `index.js` update `ReactDOM.render` and wrap the whole app with the `BrowserRouter`:
-
-```js
-ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
-  document.getElementById('root')
-)
-```
-
-</Instruction>
-
-That's it. If you run `yarn start`, you can now access two URLs. `http://localhost:3000/` will render `LinkListPage` and `http://localhost:3000/create` renders the `CreateLink` component you just wrote in the previous section.
-
-![](http://imgur.com/I16JzwW.png)
-
-### Implement navigation
-
-To wrap up this section, you need to implement an automatic redirect from the `CreateLink` to `LinkList` after a mutation was performed.
-
-<Instruction>
-
-Open `CreateLink.js` and update `_createLink` to look as follows:
-
-```js(path=".../hackernews-react-relay/src/components/CreateLink.js")
-_createLink = () => {
-  const { description, url } = this.state
-  CreateLinkMutation(description, url, () => this.props.history.push('/'))
-}
-```
-
-<Instruction>
-
-All you do here is update the `callback` that's passed into `CreateLinkMutation` to navigate back to the app's root router after mutation was completed, replacing the logging statement that you used to print before.
-
-Awesome, you're all set to build authentication functionality for the app!
+The coffee taster attempts to measure aspects of the coffee's taste, specifically the body (the texture or mouthfeel, such as oiliness), sweetness, acidity (a sharp and tangy feeling, like when biting into an orange), flavour (the characters in the cup), and aftertaste. Since coffee beans embody telltale flavours from the region where they were grown, cuppers may attempt to identify the coffee's origin.

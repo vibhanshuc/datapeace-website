@@ -21,6 +21,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         allMarkdownRemark {
           edges {
             node {
+              id
               fields {
                 slug
               }
@@ -36,6 +37,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           context: {
             // Data passed to context is available in page queries as GraphQL variables.
             slug: node.fields.slug,
+            id: node.id,
           },
         });
       });
