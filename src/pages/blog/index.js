@@ -1,19 +1,18 @@
-import React from 'react';
-import g from 'glamorous';
-import Link from 'gatsby-link';
+import React from 'react'
+import g from 'glamorous'
+import Link from 'gatsby-link'
 
-
-export default ({data}) => (
+export default ({ data }) => (
   <div>
     <g.H1 display="inline-block" borderBottom="1px solid">
       Amazing Pandas Eating Things
     </g.H1>
     <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
-    {data.allMarkdownRemark.edges.map(({node}) => (
+    {data.allMarkdownRemark.edges.map(({ node }) => (
       <div key={node.id}>
         <Link
           to={`blog${node.fields.slug}`}
-          css={{textDecoration: 'none', color: 'inherit'}}
+          css={{ textDecoration: 'none', color: 'inherit' }}
         >
           <g.H3>
             {node.frontmatter.title}{' '}
@@ -24,7 +23,7 @@ export default ({data}) => (
       </div>
     ))}
   </div>
-);
+)
 
 export const query = graphql`
   query IndexQuery {
@@ -37,7 +36,7 @@ export const query = graphql`
             title
             date(formatString: "DD MMMM, YYYY")
           }
-           fields {
+          fields {
             slug
           }
           excerpt
@@ -45,4 +44,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`

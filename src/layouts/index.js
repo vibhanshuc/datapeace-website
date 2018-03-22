@@ -1,12 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
-import 'prismjs/themes/prism-solarizedlight.css';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Helmet from 'react-helmet'
+import 'prismjs/themes/prism-solarizedlight.css'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 
-import './index.css';
-
+import './index.css'
 
 const TemplateWrapper = ({ children }) => (
   <div>
@@ -28,10 +27,10 @@ const TemplateWrapper = ({ children }) => (
       {children()}
     </div>
   </div>
-);
+)
 
 TemplateWrapper.propTypes = {
   children: PropTypes.func.isRequired,
-};
+}
 
-export default TemplateWrapper;
+export default TemplateWrapper

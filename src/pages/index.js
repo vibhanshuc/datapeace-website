@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const IndexPage = () => (
   <div>
@@ -20,6 +20,6 @@ const IndexPage = () => (
       cases. This work nature forms our core essence.
     </p>
   </div>
-);
+)
 
-export default IndexPage;
+export default IndexPage

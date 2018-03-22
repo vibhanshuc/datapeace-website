@@ -1,14 +1,14 @@
-import React from 'react';
-import Location from 'react-icons/lib/md/location-on';
-import Phone from 'react-icons/lib/md/local-phone';
-import Mail from 'react-icons/lib/md/mail';
-import { compose, withProps } from 'recompose';
+import React from 'react'
+import Location from 'react-icons/lib/md/location-on'
+import Phone from 'react-icons/lib/md/local-phone'
+import Mail from 'react-icons/lib/md/mail'
+import { compose, withProps } from 'recompose'
 import {
   withScriptjs,
   withGoogleMap,
   GoogleMap,
   Marker,
-} from 'react-google-maps';
+} from 'react-google-maps'
 
 const defaultStyles = [
   {
@@ -95,7 +95,7 @@ const defaultStyles = [
       },
     ],
   },
-];
+]
 
 const MapComponent = compose(
   withProps({
@@ -107,21 +107,18 @@ const MapComponent = compose(
     center: { lat: 28.536297, lng: 77.268404 },
   }),
   withScriptjs,
-  withGoogleMap,
+  withGoogleMap
 )(props => (
   <GoogleMap
     defaultOptions={{
- styles: defaultStyles,
-}}
+      styles: defaultStyles,
+    }}
     defaultZoom={14}
     defaultCenter={props.center}
   >
-    {props.isMarkerShown && (
-      <Marker position={props.center} />
-    )}
+    {props.isMarkerShown && <Marker position={props.center} />}
   </GoogleMap>
-));
-
+))
 
 const ContactPage = () => (
   <div>
@@ -129,8 +126,7 @@ const ContactPage = () => (
     <div>
       <Location />{' '}
       <address style={{ display: 'inline' }}>
-            E-43/1, Okhla Phase II, Okhla Industrial Area,New Delhi - 110020,
-            India
+        E-43/1, Okhla Phase II, Okhla Industrial Area,New Delhi - 110020, India
       </address>
     </div>
     <div>
@@ -142,6 +138,6 @@ const ContactPage = () => (
     <br />
     <MapComponent isMarkerShown />
   </div>
-);
+)
 
-export default ContactPage;
+export default ContactPage
