@@ -11,7 +11,7 @@ export default ({ data }) => (
     {data.allMarkdownRemark.edges.map(({ node }) => (
       <div key={node.id}>
         <Link
-          to={`blog${node.fields.slug}`}
+          to={`/blog${node.fields.slug}`}
           css={{ textDecoration: 'none', color: 'inherit' }}
         >
           <g.H3>
