@@ -29,13 +29,12 @@ export const BlogPostTemplate = ({
   );
 };
 
-export default (props) => {
+export default props => {
   const { markdownRemark: post } = props.data;
-  console.log(props);
 
   return (
     <BlogPostTemplate
-      content={post.html}
+      content={post.htmlAst}
       contentComponent={HTMLContent}
       description={post.frontmatter.description}
       helmet={<Helmet title={`Blog | ${post.frontmatter.title}`} />}
@@ -48,7 +47,7 @@ export const query = graphql`
   query BlogPostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
-      html
+      htmlAst
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
