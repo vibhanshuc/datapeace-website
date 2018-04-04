@@ -1,0 +1,20 @@
+h1 {
+  color: #ffffff;
+  max-width: 500px;
+}
+
+.header {
+  background-color: rebeccapurple;
+  background-image: url(http://via.placeholder.com/1200x450);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding-bottom: 20px;
+  background-position: center bottom;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 20px 0;
+  }
+}
