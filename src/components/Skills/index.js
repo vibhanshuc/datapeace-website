@@ -1,17 +1,25 @@
 import React from 'react';
+import bigDataIcon from './icons/big_data.png';
+import dataLakeIcon from './icons/data_lakes.png';
+import deepLearningIcon from './icons/deep_learning.png';
+import machineLearningIcon from './icons/machine_learning.png';
+import chatBotIcon from './icons/chatbots.png';
+import objectDetectionIcon from './icons/objectDetection.png';
 import './skills.scss';
 
 const Skills = () => (
   <div className="Skills">
-    <h1>What We Do</h1>
-    <p>
+    <div className="flex flex-center">
+      <h2 className="Skills-heading">What We Do</h2>
+    </div>
+    <p className="Skills-description">
         We DELIVER the benefits of data for you through cutting edge technologies and
         We PREPARE you for your journey to a Cloud ecosystem
     </p>
     <div className="Skills-grid flex flex-wrap">
       <div className="Skills-grid__item flex flex-50">
         <div className="flex-auto">
-          <img src="https://placeimg.com/100/100/tech/grayscale" />
+          <img src={bigDataIcon} />
         </div>
         <div className="flex flex-col flex-100">
           <h3>Cloud Migration</h3>
@@ -25,7 +33,7 @@ const Skills = () => (
       </div>
       <div className="Skills-grid__item flex flex-50">
         <div className="flex-auto">
-          <img src="https://placeimg.com/100/100/tech/grayscale" />
+          <img src={objectDetectionIcon} />
         </div>
         <div className="flex flex-col flex-100">
           <h3>Cloud Management</h3>
@@ -39,7 +47,7 @@ const Skills = () => (
       </div>
       <div className="Skills-grid__item flex flex-50">
         <div className="flex-auto">
-          <img src="https://placeimg.com/100/100/tech/grayscale" />
+          <img src={deepLearningIcon} />
         </div>
         <div className="flex flex-col  flex-100">
           <h3>High Performance Computing</h3>
@@ -56,7 +64,7 @@ const Skills = () => (
       </div>
       <div className="Skills-grid__item flex flex-50">
         <div className="flex-auto">
-          <img src="https://placeimg.com/100/100/tech/grayscale" />
+          <img src={dataLakeIcon} />
         </div>
         <div className="flex flex-col flex-100">
           <h3>Data Lake Implementation</h3>
@@ -74,7 +82,7 @@ const Skills = () => (
       </div>
       <div className="Skills-grid__item flex flex-50">
         <div className="flex-auto">
-          <img src="https://placeimg.com/100/100/tech/grayscale" />
+          <img src={bigDataIcon} />
         </div>
         <div className="flex flex-col flex-100">
           <h3>Big Data Analytics</h3>
@@ -87,7 +95,7 @@ const Skills = () => (
       </div>
       <div className="Skills-grid__item flex flex-50">
         <div className="flex-auto">
-          <img src="https://placeimg.com/100/100/tech/grayscale" />
+          <img src={machineLearningIcon} />
         </div>
         <div className="flex flex-col flex-100">
           <h3>Machine Learning</h3>
@@ -100,7 +108,7 @@ const Skills = () => (
       </div>
       <div className="Skills-grid__item flex flex-50">
         <div className="flex-auto">
-          <img src="https://placeimg.com/100/100/tech/grayscale" />
+          <img src={objectDetectionIcon} />
         </div>
         <div className="flex flex-col flex-100">
           <h3>Recommender Systems</h3>
@@ -113,7 +121,7 @@ const Skills = () => (
       </div>
       <div className="Skills-grid__item flex flex-50">
         <div className="flex-auto">
-          <img src="https://placeimg.com/100/100/tech/grayscale" />
+          <img src={deepLearningIcon} />
         </div>
         <div className="flex flex-col flex-100">
           <h3>Natural Language Processing</h3>
@@ -126,7 +134,7 @@ const Skills = () => (
       </div>
       <div className="Skills-grid__item flex flex-50">
         <div className="flex-auto">
-          <img src="https://placeimg.com/100/100/tech/grayscale" />
+          <img src={chatBotIcon} />
         </div>
         <div className="flex flex-col flex-100">
           <h3>Conversational Dialogue Systems</h3>

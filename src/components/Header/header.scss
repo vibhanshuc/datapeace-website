@@ -1,16 +1,34 @@
+@import "../../pages/variables";
+
 h1 {
   color: #ffffff;
   max-width: 500px;
 }
 
+.sticky {
+  width: 100%
+}
+
+.fixed {
+  position: fixed;
+  top:0;
+}
+
+.sticky.fixed {
+  background-color: $primary-color;
+}
+
+.fixed + div {
+  padding-top: 128px;
+}
+
 .header {
-  background-color: rebeccapurple;
-  background-image: url(http://via.placeholder.com/1200x450);
+  background-color: #48494a;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;
   padding-bottom: 20px;
-  background-position: center bottom;
+  background-position: center top;
+  height: 580px;
 
   ul {
     list-style: none;

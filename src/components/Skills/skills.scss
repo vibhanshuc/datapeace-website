@@ -1,6 +1,15 @@
+@import "../../pages/variables";
+
 .Skills {
   padding-top: 30px;
   padding-bottom: 30px;
+
+  &-heading {
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+  }
 
   &-grid {
 
@@ -9,6 +18,10 @@
         text-align: justify;
       }
       padding-right: 30px;
+
+      h3 {
+        margin: 0;
+      }
     }
   }
 

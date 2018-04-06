@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Link from 'gatsby-link';
+import headerImage from './hero_image1.png';
 import './header.scss';
 
 const linkStyle = {
@@ -17,15 +18,33 @@ class Header extends Component {
     };
   }
 
-    handleBtnClick = () => {
-      this.setState(prevState => ({
-        isDetailOpen: !prevState.isDetailOpen,
-      }));
-    };
+  componentDidMount() {
+    window.addEventListener('scroll', () => {
+      const sticky = this.menu.offsetTop + this.menu.clientHeight;
+      if (window.pageYOffset > sticky) {
+        this.menu.classList.add('fixed');
+      } else {
+        this.menu.classList.remove('fixed');
+      }
+    });
+  }
 
-    render() {
-      return (
-        <div className="header">
+  handleBtnClick = () => {
+    this.setState(prevState => ({
+      isDetailOpen: !prevState.isDetailOpen,
+    }));
+  };
+
+  render() {
+    return (
+      <div
+        className="header"
+        style={{ backgroundImage: `url(${headerImage})` }}
+      >
+        <div
+          ref={node => (this.menu = node)}
+          className="sticky"
+        >
           <div
             style={{
             display: 'flex',
@@ -45,44 +64,53 @@ class Header extends Component {
                 />
               </Link>
             </h1>
-            <div className="flex flex-100"
+            <div
+              className="flex flex-100"
               style={{
               justifyContent: 'space-between',
-                  alignItems: 'center',
+              alignItems: 'center',
             }}
             >
               <Link href="/about-us" to="/about-us" style={linkStyle}>
               About Us
               </Link>
-              <Link href="/advisor" to="/advisor" style={linkStyle}>
-              Advisor
-              </Link>
-              <Link href="/clients" to="/clients" style={linkStyle}>
-              Clients
-              </Link>
+              {/* <Link href="/advisor" to="/advisor" style={linkStyle}> */}
+              {/* Advisor */}
+              {/* </Link> */}
+              {/* <Link href="/clients" to="/clients" style={linkStyle}> */}
+              {/* Clients */}
+              {/* </Link> */}
               <Link href="/our-skills" to="/our-skills" style={linkStyle}>
               Our Skills
               </Link>
               <Link href="/blog" to="/blog" style={linkStyle}>
               Blog
               </Link>
-              <Link className="btn" href="/contact" to="/contact" style={linkStyle}>
+              <Link
+                className="btn"
+                href="/contact"
+                to="/contact"
+                style={linkStyle}
+              >
               Contact Us
               </Link>
             </div>
           </div>
-          <div
-            style={{
+        </div>
+        <div
+          style={{
             margin: '0 auto',
             maxWidth: 960,
           }}
-          >
-            <h1>We engineer your data journey</h1>
-            <button className="btn" onClick={this.handleBtnClick}>Read {this.state.isDetailOpen ? 'Less' : 'More' }</button>
-            {this.state.isDetailOpen && (
-            <ul>
+        >
+          <h1 className="secondary-text">We engineer your data journey</h1>
+          <button className="btn" onClick={this.handleBtnClick}>
+            Read {this.state.isDetailOpen ? 'Less' : 'More'}
+          </button>
+          {this.state.isDetailOpen && (
+            <ul className="secondary-text">
               <li>
-                  Operationalize your emerging technology journey with Data Peace
+                Operationalize your emerging technology journey with Data Peace
               </li>
               <li>
                 Our two verticals are focused on PREPARING and DELIVERING the
@@ -90,12 +118,12 @@ class Header extends Component {
               </li>
               <li>Cloud Enablement Services help you PREPARE</li>
               <li>AI as a Service helps you DELIVER.</li>
-            </ul>)
-            }
-          </div>
+            </ul>
+          )}
         </div>
-      );
-    }
+      </div>
+    );
+  }
 }
 
 export default Header;

@@ -2,8 +2,8 @@ import React from 'react';
 import './index.scss';
 
 const About = () => (
-  <div className="about">
-    <h2>About Us</h2>
+  <div className="about secondary-text">
+    <h2 className="secondary-text">About Us</h2>
     <p>We are a new age technology company! We are DATA WHISPERERS to the
         middle bulge of technology customers.
     </p>
