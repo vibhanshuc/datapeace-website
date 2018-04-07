@@ -2,6 +2,9 @@ import React from 'react';
 import MapMarker from 'react-icons/lib/fa/map-marker';
 import FaPhone from 'react-icons/lib/fa/phone';
 import MdEmail from 'react-icons/lib/md/email';
+import FaFacebook from 'react-icons/lib/fa/facebook';
+import FaTwitter from 'react-icons/lib/fa/twitter';
+import FaLinkedin from 'react-icons/lib/fa/linkedin';
 import DataPeaceMap from './map';
 import './contact.scss';
 
@@ -32,6 +35,17 @@ const Contact = () => (
           <div>
             <a href="mailto:info@datapeace.in">info@datapeace.in</a>
           </div>
+        </div>
+        <div className="Contact-social flex">
+          <a href="https://www.facebook.com/datapeaceai">
+            <FaFacebook />
+          </a>
+          <a href="https://twitter.com/datapeaceai">
+            <FaTwitter />
+          </a>
+          {/*<a href="">*/}
+            {/*<FaLinkedin />*/}
+          {/*</a>*/}
         </div>
       </div>
       <div className="flex-100">
