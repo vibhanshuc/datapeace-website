@@ -1,7 +1,4 @@
 import React from 'react';
-import Location from 'react-icons/lib/md/location-on';
-import Phone from 'react-icons/lib/md/local-phone';
-import Mail from 'react-icons/lib/md/mail';
 import { compose, withProps } from 'recompose';
 import {
   withScriptjs,
@@ -102,7 +99,7 @@ const MapComponent = compose(
     googleMapURL:
       'https://maps.googleapis.com/maps/api/js?key=AIzaSyAOWgJOMZcyy-n2GQgzf3I6rh0y_wjd3bI&v=3.exp&libraries=geometry,drawing,places',
     loadingElement: <div style={{ height: '100%' }} />,
-    containerElement: <div style={{ height: '400px' }} />,
+    containerElement: <div style={{ height: '200px' }} />,
     mapElement: <div style={{ height: '100%' }} />,
     center: { lat: 28.536297, lng: 77.268404 },
   }),
@@ -120,24 +117,4 @@ const MapComponent = compose(
   </GoogleMap>
 ));
 
-const ContactPage = () => (
-  <div>
-    <h1>CONTACT INFORMATION</h1>
-    <div>
-      <Location />{' '}
-      <address style={{ display: 'inline' }}>
-        E-43/1, Okhla Phase II, Okhla Industrial Area,New Delhi - 110020, India
-      </address>
-    </div>
-    <div>
-      <Phone /> <a href="tel:+91-9582824331">+91-9582824331</a>
-    </div>
-    <div>
-      <Mail /> <a href="mailto:info@datapeace.in">info@datapeace.in</a>
-    </div>
-    <br />
-    <MapComponent isMarkerShown />
-  </div>
-);
-
-export default ContactPage;
+export default () => <MapComponent isMarkerShown />;

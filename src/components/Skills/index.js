@@ -17,11 +17,12 @@ const Skills = () => (
         We PREPARE you for your journey to a Cloud ecosystem
     </p>
     <div className="Skills-grid flex flex-wrap">
+
       <div className="Skills-grid__item flex flex-50">
-        <div className="flex-auto">
+        <div className="Skills-grid__icon">
           <img src={bigDataIcon} />
         </div>
-        <div className="flex flex-col flex-100">
+        <div className="flex flex-col">
           <h3>Cloud Migration</h3>
           <p>We manage your journey to single cloud/ multi-cloud/ hybrid
                   cloud environments. We provide devops services, cloud migration services, cloud
@@ -32,10 +33,10 @@ const Skills = () => (
         </div>
       </div>
       <div className="Skills-grid__item flex flex-50">
-        <div className="flex-auto">
+        <div className="Skills-grid__icon">
           <img src={objectDetectionIcon} />
         </div>
-        <div className="flex flex-col flex-100">
+        <div className="flex flex-col">
           <h3>Cloud Management</h3>
           <p>
                 Once on the cloud we ensure that you achieve the desired
@@ -45,11 +46,12 @@ const Skills = () => (
           </p>
         </div>
       </div>
+
       <div className="Skills-grid__item flex flex-50">
-        <div className="flex-auto">
+        <div className="Skills-grid__icon">
           <img src={deepLearningIcon} />
         </div>
-        <div className="flex flex-col  flex-100">
+        <div className="flex flex-col">
           <h3>High Performance Computing</h3>
           <p>
                 The cloud is useless if it is not equip you to do
@@ -63,10 +65,10 @@ const Skills = () => (
         </div>
       </div>
       <div className="Skills-grid__item flex flex-50">
-        <div className="flex-auto">
+        <div className="Skills-grid__icon">
           <img src={dataLakeIcon} />
         </div>
-        <div className="flex flex-col flex-100">
+        <div className="flex flex-col">
           <h3>Data Lake Implementation</h3>
           <p>
               Don’t lose your data to want of better warehousing
@@ -81,10 +83,10 @@ const Skills = () => (
         </div>
       </div>
       <div className="Skills-grid__item flex flex-50">
-        <div className="flex-auto">
+        <div className="Skills-grid__icon">
           <img src={bigDataIcon} />
         </div>
-        <div className="flex flex-col flex-100">
+        <div className="flex flex-col">
           <h3>Big Data Analytics</h3>
           <p>
               Gain insights from your data. Uncover data, forecast future
@@ -94,10 +96,10 @@ const Skills = () => (
         </div>
       </div>
       <div className="Skills-grid__item flex flex-50">
-        <div className="flex-auto">
+        <div className="Skills-grid__icon">
           <img src={machineLearningIcon} />
         </div>
-        <div className="flex flex-col flex-100">
+        <div className="flex flex-col">
           <h3>Machine Learning</h3>
           <p>
               Use state-of- art machine learning techniques for
@@ -107,10 +109,10 @@ const Skills = () => (
         </div>
       </div>
       <div className="Skills-grid__item flex flex-50">
-        <div className="flex-auto">
+        <div className="Skills-grid__icon">
           <img src={objectDetectionIcon} />
         </div>
-        <div className="flex flex-col flex-100">
+        <div className="flex flex-col">
           <h3>Recommender Systems</h3>
           <p>
               Build scalable recommender systems combining
@@ -120,10 +122,10 @@ const Skills = () => (
         </div>
       </div>
       <div className="Skills-grid__item flex flex-50">
-        <div className="flex-auto">
+        <div className="Skills-grid__icon">
           <img src={deepLearningIcon} />
         </div>
-        <div className="flex flex-col flex-100">
+        <div className="flex flex-col">
           <h3>Natural Language Processing</h3>
           <p>
               Extract every ounce of information from textual and social media data. Deploy
@@ -132,11 +134,11 @@ const Skills = () => (
           </p>
         </div>
       </div>
-      <div className="Skills-grid__item flex flex-50">
-        <div className="flex-auto">
+      <div className="Skills-grid__item flex flex-100">
+        <div className="Skills-grid__icon">
           <img src={chatBotIcon} />
         </div>
-        <div className="flex flex-col flex-100">
+        <div className="flex flex-col">
           <h3>Conversational Dialogue Systems</h3>
           <p>
               We build chatbots that provide deep first

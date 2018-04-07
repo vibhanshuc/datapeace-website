@@ -5,7 +5,7 @@ import 'prismjs/themes/prism-solarizedlight.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-import './index.css';
+import './index.scss';
 
 const TemplateWrapper = ({ children }) => (
   <div>
@@ -20,7 +20,7 @@ const TemplateWrapper = ({ children }) => (
     <div>
       {children()}
     </div>
-      <Footer/>
+    <Footer />
   </div>
 );
 

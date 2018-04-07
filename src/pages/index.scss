@@ -1,4 +1,4 @@
-@import "variables";
+@import "../layouts/variables";
 
 .flex {
   display: flex;
@@ -35,6 +35,10 @@
   &-sa {
     justify-content: space-around;
   }
+
+  &-sb {
+    justify-content: space-between;
+  }
 }
 
 .margin-auto {
@@ -43,11 +47,12 @@
 }
 
 .dark-container {
+  color: $secondary-color;
   background-color: $primary-color;
 }
 
-.secondary-text {
-  color: $secondary-color;
+.padded {
+  padding: 100px 0;
 }
 
 .btn {

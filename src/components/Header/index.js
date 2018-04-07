@@ -1,14 +1,8 @@
 import React, { Component } from 'react';
-import Link from 'gatsby-link';
+import FaChevronRight from 'react-icons/lib/fa/chevron-circle-right';
+import Menu from './Menu';
 import headerImage from './hero_image1.png';
 import './header.scss';
-
-const linkStyle = {
-  color: 'white',
-  textDecoration: 'none',
-  margin: '0 5px',
-  display: 'flex',
-};
 
 class Header extends Component {
   constructor() {
@@ -29,6 +23,13 @@ class Header extends Component {
     });
   }
 
+  handleMenuItemClick = (id) => {
+    const ele = document.getElementById(id);
+    if (ele) {
+      ele.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   handleBtnClick = () => {
     this.setState(prevState => ({
       isDetailOpen: !prevState.isDetailOpen,
@@ -45,79 +46,40 @@ class Header extends Component {
           ref={node => (this.menu = node)}
           className="sticky"
         >
-          <div
-            style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            margin: '0 auto',
-            maxWidth: 960,
-          }}
-          >
-            <h1 className="flex-50">
-              <Link href="/" to="/" style={linkStyle}>
-                <img
-                  style={{ marginBottom: 0 }}
-                  alt="logo"
-                  height="80"
-                  src="https://dl.dropbox.com/s/7ucsv1m2jhpj68l/128x128_white.png"
-                />
-              </Link>
-            </h1>
-            <div
-              className="flex flex-100"
-              style={{
-              justifyContent: 'space-between',
-              alignItems: 'center',
-            }}
-            >
-              <Link href="/about-us" to="/about-us" style={linkStyle}>
-              About Us
-              </Link>
-              {/* <Link href="/advisor" to="/advisor" style={linkStyle}> */}
-              {/* Advisor */}
-              {/* </Link> */}
-              {/* <Link href="/clients" to="/clients" style={linkStyle}> */}
-              {/* Clients */}
-              {/* </Link> */}
-              <Link href="/our-skills" to="/our-skills" style={linkStyle}>
-              Our Skills
-              </Link>
-              <Link href="/blog" to="/blog" style={linkStyle}>
-              Blog
-              </Link>
-              <Link
-                className="btn"
-                href="/contact"
-                to="/contact"
-                style={linkStyle}
-              >
-              Contact Us
-              </Link>
-            </div>
-          </div>
+          <Menu onMenuItemClick={this.handleMenuItemClick} />
         </div>
-        <div
-          style={{
-            margin: '0 auto',
-            maxWidth: 960,
-          }}
-        >
-          <h1 className="secondary-text">We engineer your data journey</h1>
+        <div className="header-heading">
+          <h1>We engineer your data journey</h1>
           <button className="btn" onClick={this.handleBtnClick}>
             Read {this.state.isDetailOpen ? 'Less' : 'More'}
           </button>
           {this.state.isDetailOpen && (
-            <ul className="secondary-text">
+            <ul>
               <li>
+                <span><FaChevronRight /></span>
+                <span>
                 Operationalize your emerging technology journey with Data Peace
+                </span>
               </li>
               <li>
-                Our two verticals are focused on PREPARING and DELIVERING the
+                <span><FaChevronRight /></span>
+                <span>
+                    Our two verticals are focused on PREPARING and DELIVERING the
                 promise of Emerging Technologies for your business.
+                </span>
               </li>
-              <li>Cloud Enablement Services help you PREPARE</li>
-              <li>AI as a Service helps you DELIVER.</li>
+              <li>
+                <span><FaChevronRight /></span>
+                <span>
+                  Cloud Enablement Services help you PREPARE
+                </span>
+              </li>
+              <li>
+                <span><FaChevronRight /></span>
+                <span>
+                  AI as a Service helps you DELIVER.
+                </span>
+              </li>
             </ul>
           )}
         </div>
