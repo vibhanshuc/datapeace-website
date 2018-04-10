@@ -18,18 +18,20 @@
     justify-content: center;
 
     &__heading {
+      color: $dark-grey-color;
       padding-bottom: 40px;
       text-transform: uppercase;
     }
 
     h4 {
+      color: $dark-grey-color;
       text-transform: uppercase;
       text-align: center;
       padding: 20px;
     }
 
     a {
-      color: #000000;
+      color: $lighter-grey-color;
       text-decoration: none;
     }
 
@@ -41,6 +43,8 @@
 
   &-line {
     align-items: center;
+    color: $lighter-grey-color;
+
     &:not(:last-of-type) {
       border-bottom: 1px solid darken($grey-color, 10);
     }

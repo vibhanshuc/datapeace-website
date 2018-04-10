@@ -2,7 +2,7 @@
 
 .Skills {
   &-heading {
-    color: #000000;
+    color: $dark-grey-color;
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
@@ -25,6 +25,7 @@
     padding: 20px;
 
     p {
+      color: $light-grey-color;
       margin: 5px;
     }
   }
@@ -32,22 +33,52 @@
   &-grid {
 
     &__item {
-      padding: 10px;
+      margin: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      flex-direction: column;
+      box-shadow: 1px 2px 7px 1px rgba(0, 0, 0, 0.1);
+      padding: 50px;
 
       p {
         text-align: justify;
-      }
-
-      h3 {
         margin: 0;
+        color: $light-grey-color;
+      }
+
+      h4 {
+        font-weight: 400;
+        margin: 0;
+        color: $light-grey-color;
+        text-transform: uppercase;
       }
     }
 
-    &__icon {
-      text-align: center;
-      min-width: 100px;
-      margin: 10px;
-    }
   }
 
+}
+
+.Item {
+
+
+  &-icon {
+    text-align: center;
+    min-width: 100px;
+  }
+
+  &-title {
+    margin: 20px;
+    position: relative;
+    &::after {
+      content: '';
+      width: 80%;
+      position: absolute;
+      bottom: -6px;
+      left: 10%;
+      height: 2px;
+      background-color: $primary-color;
+    }
+  }
 }
