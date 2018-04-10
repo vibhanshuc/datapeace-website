@@ -7,14 +7,65 @@
   }
 
   &-description {
+
     padding: 40px 0;
     > div {
+      position: relative;
+      padding-top: 20px;
+
+      &:last-of-type {
+        .border-vertical {
+          width: 15%;
+          top: 40px;
+          right: -30px;
+        }
+      }
+
       p {
+        position: relative;
         margin: 0;
         padding: 0 20px 20px 0;
       }
 
-      padding-top: 20px;
+      p:last-of-type {
+        padding-left: 20px;
+        padding-right: 0;
+      }
+
+      .border-vertical {
+        width: 10%;
+        position: absolute;
+        right: -15px;
+        top: 25px;
+        height: 1px;
+        background-color: darken($grey-color, 10);
+        transform: rotate(90deg);
+      }
+
+      &:not(:last-of-type) {
+        p {
+          position: relative;
+          &:after {
+            content: '';
+            width: 80%;
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            height: 1px;
+            background-color: darken($grey-color, 10);
+          }
+
+          &:last-of-type {
+            &:after {
+              left: unset;
+              right: 0;
+            }
+          }
+        }
+
+
+      }
+
 
       //&:not(:last-of-type) {
       //  p {

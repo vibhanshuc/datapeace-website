@@ -1,10 +1,13 @@
 import React from 'react';
-import bigDataIcon from './icons/big_data.png';
-import dataLakeIcon from './icons/data_lakes.png';
-import deepLearningIcon from './icons/deep_learning.png';
-import machineLearningIcon from './icons/machine_learning.png';
-import chatBotIcon from './icons/chatbots.png';
-import objectDetectionIcon from './icons/objectDetection.png';
+import CloudMigrationIcon from './Icons/CloudMigration.svg';
+import CloudManagementIcon from './Icons/CloudManagement.svg';
+import HighPerformanceComputingIcon from './Icons/HighPerformanceComputing.svg';
+import DataLakeImplementationIcon from './Icons/DataLakeImplementation.svg';
+import BigDataAnalyticsIcon from './Icons/BigDataAnalytics.svg';
+import MachineLearningIcon from './Icons/MachineLearning.svg';
+import RecommenderSystemsIcon from './Icons/RecommenderSystems.svg';
+import NaturalLanguageProcessingIcon from './Icons/NaturalLanguageProcessing.svg';
+import ConversationalDialogueSystemsIcon from './Icons/ConversationalDialogueSystems.svg';
 import './skills.scss';
 
 const Skills = () => (
@@ -20,7 +23,7 @@ const Skills = () => (
 
       <div className="Skills-grid__item flex flex-50">
         <div className="Skills-grid__icon">
-          <img src={bigDataIcon} />
+          <img src={CloudMigrationIcon} />
         </div>
         <div className="flex flex-col">
           <h3>Cloud Migration</h3>
@@ -32,7 +35,7 @@ const Skills = () => (
       </div>
       <div className="Skills-grid__item flex flex-50">
         <div className="Skills-grid__icon">
-          <img src={objectDetectionIcon} />
+          <img src={CloudManagementIcon} />
         </div>
         <div className="flex flex-col">
           <h3>Cloud Management</h3>
@@ -47,7 +50,7 @@ const Skills = () => (
 
       <div className="Skills-grid__item flex flex-50">
         <div className="Skills-grid__icon">
-          <img src={deepLearningIcon} />
+          <img src={HighPerformanceComputingIcon} />
         </div>
         <div className="flex flex-col">
           <h3>High Performance Computing</h3>
@@ -64,7 +67,7 @@ const Skills = () => (
       </div>
       <div className="Skills-grid__item flex flex-50">
         <div className="Skills-grid__icon">
-          <img src={dataLakeIcon} />
+          <img src={DataLakeImplementationIcon} />
         </div>
         <div className="flex flex-col">
           <h3>Data Lake Implementation</h3>
@@ -82,7 +85,7 @@ const Skills = () => (
       </div>
       <div className="Skills-grid__item flex flex-50">
         <div className="Skills-grid__icon">
-          <img src={bigDataIcon} />
+          <img src={BigDataAnalyticsIcon} />
         </div>
         <div className="flex flex-col">
           <h3>Big Data Analytics</h3>
@@ -95,7 +98,7 @@ const Skills = () => (
       </div>
       <div className="Skills-grid__item flex flex-50">
         <div className="Skills-grid__icon">
-          <img src={machineLearningIcon} />
+          <img src={MachineLearningIcon} />
         </div>
         <div className="flex flex-col">
           <h3>Machine Learning</h3>
@@ -108,7 +111,7 @@ const Skills = () => (
       </div>
       <div className="Skills-grid__item flex flex-50">
         <div className="Skills-grid__icon">
-          <img src={objectDetectionIcon} />
+          <img src={RecommenderSystemsIcon} />
         </div>
         <div className="flex flex-col">
           <h3>Recommender Systems</h3>
@@ -121,7 +124,7 @@ const Skills = () => (
       </div>
       <div className="Skills-grid__item flex flex-50">
         <div className="Skills-grid__icon">
-          <img src={deepLearningIcon} />
+          <img src={NaturalLanguageProcessingIcon} />
         </div>
         <div className="flex flex-col">
           <h3>Natural Language Processing</h3>
@@ -134,7 +137,7 @@ const Skills = () => (
       </div>
       <div className="Skills-grid__item flex flex-100">
         <div className="Skills-grid__icon">
-          <img src={chatBotIcon} />
+          <img src={ConversationalDialogueSystemsIcon} />
         </div>
         <div className="flex flex-col">
           <h3>Conversational Dialogue Systems</h3>
