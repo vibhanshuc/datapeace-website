@@ -30,17 +30,33 @@
     }
   }
 
+  &-link {
+    padding: 10px 0;
+    text-transform: uppercase;
+    color: $light-grey-color;
+    font-weight: 400;
+    cursor: pointer;
+
+    &.active {
+      color: $primary-color;
+    }
+  }
+
+
   &-grid {
 
     &__item {
-      margin: 10px;
       display: flex;
       justify-content: center;
       align-items: center;
       position: relative;
       flex-direction: column;
       box-shadow: 1px 2px 7px 1px rgba(0, 0, 0, 0.1);
-      padding: 50px;
+      padding: 40px;
+
+      &:hover {
+        box-shadow: 1px 2px 7px 2px rgba(0, 0, 0, 0.2);
+      }
 
       p {
         text-align: justify;
@@ -62,15 +78,15 @@
 
 .Item {
 
-
   &-icon {
     text-align: center;
     min-width: 100px;
   }
 
   &-title {
-    margin: 20px;
+    margin: 20px 0;
     position: relative;
+
     &::after {
       content: '';
       width: 80%;
