@@ -1,3 +1,37 @@
-.about {
-  padding: 40px 0;
+@import "../../layouts/variables";
+
+.About {
+
+  &-heading {
+    text-transform: uppercase;
+  }
+
+  &-description {
+    padding: 40px 0;
+    > div {
+      p {
+        margin: 0;
+        padding: 0 20px 20px 0;
+      }
+
+      padding-top: 20px;
+
+      //&:not(:last-of-type) {
+      //  p {
+      //    border-bottom: 1px solid darken($grey-color, 15);
+      //  }
+      //}
+      //p {
+      //  &:first-of-type {
+      //    padding-right: 30px;
+      //    padding-bottom: 30px;
+      //    border-right: 1px solid darken($grey-color, 15);
+      //
+      //  }
+      //  &:last-of-type {
+      //    padding-left: 30px;
+      //  }
+      //}
+    }
+  }
 }

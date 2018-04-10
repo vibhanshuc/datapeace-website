@@ -196,7 +196,6 @@ body {
   word-wrap: break-word;
   font-kerning: normal;
   -moz-font-feature-settings: "kern", "liga", "clig", "calt";
-  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
 }
@@ -206,10 +205,10 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
 }
 h1 {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 h2 {
-  font-size: 1.8rem;
+  font-size: 2.5rem;
 }
 
 h3 {

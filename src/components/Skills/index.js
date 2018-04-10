@@ -9,13 +9,13 @@ import './skills.scss';
 
 const Skills = () => (
   <div className="Skills">
-    <div className="flex flex-center">
+    <div className="flex-center flex-col">
       <h2 className="Skills-heading">What We Do</h2>
     </div>
-    <p className="Skills-description">
-        We DELIVER the benefits of data for you through cutting edge technologies and
-        We PREPARE you for your journey to a Cloud ecosystem
-    </p>
+    <div className="flex flex-col flex-center Skills-description">
+      <p>We DELIVER the benefits of data for you through cutting edge technologies</p>
+      <p>and We PREPARE you for your journey to a Cloud ecosystem</p>
+    </div>
     <div className="Skills-grid flex flex-wrap">
 
       <div className="Skills-grid__item flex flex-50">
@@ -24,11 +24,9 @@ const Skills = () => (
         </div>
         <div className="flex flex-col">
           <h3>Cloud Migration</h3>
-          <p>We manage your journey to single cloud/ multi-cloud/ hybrid
-                  cloud environments. We provide devops services, cloud migration services, cloud
-                  application modernization, cloud native custom development and cloud
-                  infrastructure transformation services.
-
+          <p>We manage your journey to single cloud/ multi-cloud/ hybrid cloud environments.
+              We provide devops services, cloud migration services, cloud application
+              cloud native custom development and cloud infrastructure transformation services.
           </p>
         </div>
       </div>
@@ -39,10 +37,10 @@ const Skills = () => (
         <div className="flex flex-col">
           <h3>Cloud Management</h3>
           <p>
-                Once on the cloud we ensure that you achieve the desired
-                outcomes with your data and applications parked there. We provision and
-                maintain cloud- based architecture solutions employing micro-services,
-                distributed database systems, load-balancing and caching.
+            Once on the cloud we ensure that you achieve the desired
+            outcomes with your data and applications parked there. We provision and
+            maintain cloud- based architecture solutions employing micro-services,
+            distributed database systems, load-balancing and caching.
           </p>
         </div>
       </div>
