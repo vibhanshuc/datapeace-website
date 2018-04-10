@@ -14,41 +14,48 @@ const Contact = () => (
       <h2 className="Contact-row__heading">Get in Touch</h2>
     </div>
     <div className="Contact-row">
-      <div className="flex-100">
+      <div className="Contact-column flex-100">
         <h4>Contact Information</h4>
-        <div className="Contact-line flex">
-          <div>
-            <MapMarker />
+        <div>
+          <div className="Contact-line flex">
+            <div>
+              <MapMarker />
+            </div>
+            <div>
+              E-43/1, Okhla Phase 2, Okhla Industrial Area, New Delhi - 110020,
+              India
+            </div>
           </div>
-          <div>E-43/1, Okhla Phase 2, Okhla Industrial Area, New Delhi - 110020, India</div>
+          <div className="Contact-line flex">
+            <div>
+              <FaPhone />
+            </div>
+            <div>
+              <a href="tel:+91-9582824331">+91-9582824331</a>
+            </div>
+          </div>
+          <div className="Contact-line flex">
+            <div>
+              <MdEmail />
+            </div>
+            <div>
+              <a href="mailto:info@datapeace.in">info@datapeace.in</a>
+            </div>
+          </div>
         </div>
-        <div className="Contact-line flex">
-          <div>
-            <FaPhone />
-          </div>
-          <div>+91-9582824331</div>
-        </div>
-        <div className="Contact-line flex">
-          <div>
-            <MdEmail />
-          </div>
-          <div>
-            <a href="mailto:info@datapeace.in">info@datapeace.in</a>
-          </div>
-        </div>
-        <div className="Contact-social flex">
+        <div className="Contact-social flex flex-center">
           <a href="https://www.facebook.com/datapeaceai">
             <FaFacebook />
           </a>
           <a href="https://twitter.com/datapeaceai">
             <FaTwitter />
           </a>
-          {/*<a href="">*/}
-            {/*<FaLinkedin />*/}
-          {/*</a>*/}
+          <a href="https://www.linkedin.com/company/13704845/">
+            <FaLinkedin />
+          </a>
         </div>
       </div>
-      <div className="flex-100">
+      <div className="Contact-column flex-100">
         <DataPeaceMap />
       </div>
     </div>

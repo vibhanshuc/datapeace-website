@@ -5,40 +5,64 @@
   display: flex;
   flex-direction: column;
 
+  &-column {
+    &:first-of-type {
+      padding: 20px;
+      box-shadow: 1px 2px 7px 1px rgba(0, 0, 0, 0.1);
+      margin-right: 20px;
+    }
+  }
+
   &-row {
     display: flex;
     justify-content: center;
 
     &__heading {
-      padding-bottom: 30px;
+      padding-bottom: 40px;
+      text-transform: uppercase;
     }
 
     h4 {
-      padding-bottom: 20px;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 20px;
     }
 
     a {
       color: #000000;
+      text-decoration: none;
     }
 
     @include phone() {
       flex-direction: column;
     }
 
-
   }
 
   &-line {
-    > div {
-      padding-right: 20px;
-      padding-bottom: 20px;
+    align-items: center;
+    &:not(:last-of-type) {
+      border-bottom: 1px solid darken($grey-color, 10);
     }
+    > div {
+      padding: 20px 20px 20px 0;
+    }
+
+    svg {
+      font-size: 2rem;
+      fill: $primary-color;
+    }
+
   }
 
   &-social {
-    padding-top: 110px;
     a {
       padding-right: 20px;
+    }
+
+    svg {
+      font-size: 2rem;
+      fill: darken($grey-color, 50);
     }
 
     @include  phone {
