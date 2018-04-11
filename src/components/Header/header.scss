@@ -32,17 +32,18 @@
     justify-content: center;
     padding: 150px;
 
-    h1, h2 {
+    h1 {
+      font-size: 5rem;
       color: $secondary-color;
       text-transform: uppercase;
     }
 
-    h1 {
+    h1:first-of-type {
       font-size: 5rem;
     }
 
-    h2 {
-      font-size: 4rem;
+    h1:not(:first-of-type) {
+      font-weight: 300;
     }
   }
 

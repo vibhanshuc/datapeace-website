@@ -31,7 +31,7 @@ class Header extends Component {
         <Menu onMenuItemClick={this.handleMenuItemClick} />
         <div className="header-heading">
           <h1>We engineer</h1>
-          <h2>your data journey</h2>
+          <h1>your data journey</h1>
         </div>
       </div>
     );

@@ -21,10 +21,9 @@ const Contact = () => (
             <div>
               <MapMarker />
             </div>
-            <div>
-              E-43/1, Okhla Phase 2, Okhla Industrial Area, New Delhi - 110020,
-              India
-            </div>
+            <address>
+                Two Horizon Center, DLF Phase 5, Gurugram, Haryana 122002, India
+            </address>
           </div>
           <div className="Contact-line flex">
             <div>
