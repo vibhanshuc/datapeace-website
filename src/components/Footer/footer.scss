@@ -1,4 +1,8 @@
+@import "../../layouts/variables";
+
 .footer {
+  color: $secondary-color;
+  background-color: $primary-color;
   text-align: center;
   padding: 10px;
 }

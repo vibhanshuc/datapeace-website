@@ -118,7 +118,7 @@ class Skills extends React.Component {
     activeIndex: 0,
   };
 
-  handleLinkClick = (index) => {
+  handleLinkClick = index => {
     this.setState({
       activeIndex: index,
     });
@@ -132,18 +132,20 @@ class Skills extends React.Component {
           <h2 className="Skills-heading">What We Do</h2>
         </div>
         <div className="flex flex-col flex-center Skills-description">
+          <p>We deliver the promise of the Cloud for your business.</p>
           <p>
-            We deliver the benefits of data for you through cutting edge
-            technologies
+            We ensure that you not only experience great technology but also
+            remarkable business outcomes.
           </p>
-          <p>and we prepare you for your journey to a Cloud ecosystem</p>
         </div>
         <div className="Skills-grid flex flex-wrap">
           <div className="flex-40">
             {items.map((item, index) => (
               <div
                 key={index}
-                className={`Skills-link ${index === this.state.activeIndex ? 'active' : ''}`}
+                className={`Skills-link ${
+                  index === this.state.activeIndex ? 'active' : ''
+                }`}
                 onClick={() => this.handleLinkClick(index)}
               >
                 {item.title}

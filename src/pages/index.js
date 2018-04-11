@@ -6,7 +6,7 @@ import Contact from '../components/Contact';
 
 const IndexPage = () => (
   <div>
-    <div className="margin-auto padded" id="skills">
+    <div className="margin-auto padded" id="services">
       <Skills />
     </div>
     <div className="dark-container padded" id="about">

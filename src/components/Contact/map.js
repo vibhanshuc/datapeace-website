@@ -14,7 +14,7 @@ const MapComponent = compose(
     loadingElement: <div style={{ height: '100%' }} />,
     containerElement: <div style={{ height: '350px' }} />,
     mapElement: <div style={{ height: '100%' }} />,
-    center: { lat: 28.536297, lng: 77.268404 },
+    center: { lat: 28.4510685, lng: 77.09644070000002 },
   }),
   withScriptjs,
   withGoogleMap,

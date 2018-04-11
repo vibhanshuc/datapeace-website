@@ -14,7 +14,7 @@ const Menu = ({ onMenuItemClick }) => (
       </Link>
     </h1>
     <div className="flex flex-100 flex-center flex-sb">
-      <button onClick={() => onMenuItemClick('skills')} className="Menu-item">Our Skills</button>
+      <button onClick={() => onMenuItemClick('services')} className="Menu-item">Our Services</button>
       <button onClick={() => onMenuItemClick('about')} className="Menu-item">About Us</button>
       <button onClick={() => onMenuItemClick('contact')} className="Menu-item btn">Contact Us</button>
     </div>
