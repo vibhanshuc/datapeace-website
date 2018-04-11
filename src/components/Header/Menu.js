@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
-import logo from './128x128_white.png';
+import logo from './logo.png';
 
 const Menu = ({ onMenuItemClick }) => (
   <div className="Menu">

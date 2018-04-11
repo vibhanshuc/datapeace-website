@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Menu from './Menu';
-import headerImage from './Banner.png';
+import headerImage from './Banner.jpg';
 import './header.scss';
 
 class Header extends Component {
