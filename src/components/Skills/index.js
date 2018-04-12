@@ -79,7 +79,7 @@ const items = [
     title: 'Machine Learning',
     icon: MachineLearningIcon,
     description:
-      'Use state-of- art machine learning techniques for classification,\n' +
+      'Use state-of-art machine learning techniques for classification,\n' +
       '            regression and unsupervised learning problems. Pipelined models then\n' +
       '            get deployed on software stacks.',
   },
@@ -118,6 +118,24 @@ class Skills extends React.Component {
     activeIndex: 0,
   };
 
+  componentDidMount() {
+    this.setRotateIndex();
+  }
+
+  setRotateIndex = () => {
+    this.interval = setInterval(this.rotateIndex, 5000);
+  };
+
+  clearRotateIndex = () => {
+    clearInterval(this.interval);
+  };
+
+  rotateIndex = () => {
+    this.setState(prevState => ({
+      activeIndex: prevState.activeIndex === items.length - 1 ? 0 : prevState.activeIndex + 1,
+    }));
+  };
+
   handleLinkClick = (index) => {
     this.setState({
       activeIndex: index,
@@ -146,7 +164,7 @@ class Skills extends React.Component {
                 className={`Skills-link ${
                   index === this.state.activeIndex ? 'active' : ''
                 }`}
-                onClick={() => this.handleLinkClick(index)}
+                onMouseEnter={() => this.handleLinkClick(index)}
               >
                 <div>{item.title}</div>
                 <SkillItem
@@ -157,7 +175,11 @@ class Skills extends React.Component {
               </div>
             ))}
           </div>
-          <div className="Skills-active flex-60">
+          <div
+            className="Skills-active flex-60"
+            onMouseEnter={this.clearRotateIndex}
+            onMouseLeave={this.setRotateIndex}
+          >
             <SkillItem
               title={activeItem.title}
               icon={activeItem.icon}

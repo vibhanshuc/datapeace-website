@@ -15,6 +15,9 @@ const Contact = () => (
     </div>
     <div className="Contact-row">
       <div className="Contact-column flex-100">
+        <DataPeaceMap />
+      </div>
+      <div className="Contact-column flex-100">
         <h4>Contact Information</h4>
         <div>
           <div className="Contact-line flex">
@@ -43,19 +46,16 @@ const Contact = () => (
           </div>
         </div>
         <div className="Contact-social flex flex-center">
-          <a href="https://www.facebook.com/datapeaceai">
+          <a rel="noopener noreferrer" target="_blank" href="https://www.facebook.com/datapeaceai">
             <FaFacebook />
           </a>
-          <a href="https://twitter.com/datapeaceai">
+          <a rel="noopener noreferrer" target="_blank" href="https://twitter.com/datapeaceai">
             <FaTwitter />
           </a>
-          <a href="https://www.linkedin.com/company/13704845/">
+          <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/company/13704845/">
             <FaLinkedin />
           </a>
         </div>
-      </div>
-      <div className="Contact-column flex-100">
-        <DataPeaceMap />
       </div>
     </div>
   </div>
