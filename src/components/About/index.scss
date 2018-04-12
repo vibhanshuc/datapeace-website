@@ -1,4 +1,5 @@
 @import "../../layouts/variables";
+@import "../../layouts/mixins";
 
 .About {
 
@@ -14,6 +15,12 @@
       position: relative;
       padding-top: 20px;
 
+      @include phone {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 0;
+      }
+
       &:last-of-type {
         .border-vertical {
           width: 15%;
@@ -27,11 +34,20 @@
         margin: 0;
         padding: 0 20px 20px 0;
         color: $light-grey-color;
+
+        @include phone {
+          line-height: 1.5;
+          padding: 5px 5px 20px;
+        }
       }
 
       p:last-of-type {
         padding-left: 20px;
         padding-right: 0;
+
+        @include phone {
+          padding: 5px 5px 20px;
+        }
       }
 
       .border-vertical {
@@ -42,49 +58,61 @@
         height: 1px;
         background-color: darken($grey-color, 10);
         transform: rotate(90deg);
+
+        @include phone {
+          display: none;
+        }
       }
 
-      &:not(:last-of-type) {
-        p {
-          position: relative;
-          &:after {
-            content: '';
-            width: 80%;
-            position: absolute;
-            bottom: -15px;
-            left: 0;
-            height: 1px;
-            background-color: darken($grey-color, 10);
-          }
+      p {
+        position: relative;
+        &:after {
+          content: '';
+          width: 80%;
+          position: absolute;
+          bottom: -15px;
+          left: 0;
+          height: 2px;
+          background-color: darken($grey-color, 10);
 
-          &:last-of-type {
-            &:after {
-              left: unset;
-              right: 0;
-            }
+          @include phone {
+            bottom: 0;
+            left: 10%;
           }
         }
 
+        &:last-of-type {
+          &:after {
+            left: unset;
+            right: 0;
 
+            @include phone {
+              right: unset;
+              left: 10%;
+            }
+          }
+        }
       }
 
+      @include desktop {
+        &:last-of-type {
+          p {
+            &:after {
+              display: none;
+            }
+          }
+        }
+      }
 
-      //&:not(:last-of-type) {
-      //  p {
-      //    border-bottom: 1px solid darken($grey-color, 15);
-      //  }
-      //}
-      //p {
-      //  &:first-of-type {
-      //    padding-right: 30px;
-      //    padding-bottom: 30px;
-      //    border-right: 1px solid darken($grey-color, 15);
-      //
-      //  }
-      //  &:last-of-type {
-      //    padding-left: 30px;
-      //  }
-      //}
+      @include phone {
+        &:last-of-type {
+          p:last-of-type {
+            &:after {
+              display: none;
+            }
+          }
+        }
+      }
     }
   }
 }
