@@ -2,24 +2,9 @@
 @import '../../layouts/mixins';
 
 .Skills {
-  &-heading {
-    color: $dark-grey-color;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
-    text-transform: uppercase;
-    position: relative;
 
-    &::after {
-      content: '';
-      width: 20%;
-      position: absolute;
-      bottom: -15px;
-      left: 40%;
-      color: $primary-color;
-      height: 2px;
-      background-color: $primary-color;
-    }
+  &-group-heading {
+    padding: 40px 20px 30px 20px;
   }
 
   &-description {
@@ -91,6 +76,7 @@
       flex-direction: column;
       box-shadow: 1px 2px 7px 1px rgba(0, 0, 0, 0.1);
       padding: 40px;
+      min-height: 370px;
 
       @include phone {
         box-shadow: unset;
@@ -140,15 +126,5 @@
   &-title {
     margin: 20px 0;
     position: relative;
-
-    &::after {
-      content: '';
-      width: 80%;
-      position: absolute;
-      bottom: -6px;
-      left: 10%;
-      height: 2px;
-      background-color: $primary-color;
-    }
   }
 }

@@ -92,7 +92,42 @@
   }
 }
 
+.animated-button {
+  z-index: 0;
 
+  &.thar-one {
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    position: relative;
+
+    &:hover {
+      background-color: transparent;
+      text-shadow: none;
+
+      &:before {
+        bottom: 0;
+        top: auto;
+        height: 100%;
+      }
+    }
+
+    &:before {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 0;
+      width: 100%;
+      content: '';
+      background: $primary-color;
+      transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+      z-index: -1;
+      border-radius: 15px;
+    }
+
+  }
+}
 .primary-text {
   color: $primary-color;
 }

@@ -1,0 +1,28 @@
+@import "../../../layouts/variables";
+
+.heading {
+  color: $dark-grey-color;
+  display: inline-block;
+  justify-content: center;
+  text-transform: uppercase;
+  position: relative;
+
+  &.small {
+    font-size: 1.5rem;
+  }
+
+  &.lighter {
+    color: $lighter-grey-color;
+  }
+
+  &::after {
+    content: '';
+    width: 70%;
+    position: absolute;
+    bottom: -10px;
+    left: 15%;
+    color: $primary-color;
+    height: 2px;
+    background-color: $primary-color;
+  }
+}

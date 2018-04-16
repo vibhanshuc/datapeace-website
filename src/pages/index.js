@@ -1,6 +1,7 @@
 import React from 'react';
 import './index.scss';
 import Skills from '../components/Skills';
+import Clients from '../components/Clients';
 import About from '../components/About';
 import Contact from '../components/Contact';
 
@@ -9,6 +10,11 @@ const IndexPage = () => (
     <div className="margin-auto padded" id="services">
       <Skills />
     </div>
+    {/*<div className="padded" id="about">*/}
+      {/*<div className="margin-auto">*/}
+        {/*<Clients />*/}
+      {/*</div>*/}
+    {/*</div>*/}
     <div className="dark-container padded" id="about">
       <div className="margin-auto">
         <About />
