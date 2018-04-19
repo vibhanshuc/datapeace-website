@@ -13,7 +13,7 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || Content;
 
   return (
-    <section className="Blog">
+    <section>
       {helmet || ''}
       <div>
         <div>
@@ -36,13 +36,15 @@ export default (props) => {
   return (
     <div>
       <Header />
-      <BlogPostTemplate
-        content={post.htmlAst}
-        contentComponent={HTMLContent}
-        description={post.frontmatter.description}
-        helmet={<Helmet title={`Blog | ${post.frontmatter.title}`} />}
-        title={post.frontmatter.title}
-      />
+      <div className="Blog">
+        <BlogPostTemplate
+          content={post.htmlAst}
+          contentComponent={HTMLContent}
+          description={post.frontmatter.description}
+          helmet={<Helmet title={`Blog | ${post.frontmatter.title}`} />}
+          title={post.frontmatter.title}
+        />
+      </div>
     </div>
   );
 };
