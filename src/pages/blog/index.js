@@ -13,9 +13,18 @@ export default ({ data }) => (
     <div className="BlogsList">
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <div className="BlogsList-item" key={node.id}>
-          <h3>
-            {node.frontmatter.title}{' '}
-          </h3>
+          <div className="flex">
+            <img src="/img/ravi.jpg" alt="avatar" />
+            <div className="BlogsList-item-header">
+              <div className="flex">
+                <h5>Ravi Naval</h5>
+                <h5>{node.frontmatter.date}</h5>
+              </div>
+              <h3>
+                {node.frontmatter.title}{' '}
+              </h3>
+            </div>
+          </div>
           <p>{node.frontmatter.description}</p>
           <Link
             className="btn btn-primary"
