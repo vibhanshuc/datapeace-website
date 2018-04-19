@@ -1,5 +1,4 @@
 import React from 'react';
-import g from 'glamorous';
 import Link from 'gatsby-link';
 import Header from '../../components/Header';
 import './index.scss';
@@ -14,15 +13,16 @@ export default ({ data }) => (
     <div className="BlogsList">
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <div className="BlogsList-item" key={node.id}>
+          <h3>
+            {node.frontmatter.title}{' '}
+          </h3>
+          <p>{node.frontmatter.description}</p>
           <Link
+            className="btn btn-primary"
             to={`/blog${node.fields.slug}`}
             css={{ textDecoration: 'none', color: 'inherit' }}
           >
-            <g.H3>
-              {node.frontmatter.title}{' '}
-              <g.Span color="#BBB">— {node.frontmatter.date}</g.Span>
-            </g.H3>
-            <p>{node.excerpt}</p>
+              Read More
           </Link>
         </div>
     ))}
@@ -39,12 +39,12 @@ export const query = graphql`
           id
           frontmatter {
             title
+            description
             date(formatString: "DD MMMM, YYYY")
           }
           fields {
             slug
           }
-          excerpt
         }
       }
     }
