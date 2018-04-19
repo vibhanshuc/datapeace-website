@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { navigateTo } from 'gatsby-link';
 import Menu from './Menu';
 import headerImage from './Banner.jpg';
 import './header.scss';
@@ -15,12 +16,21 @@ class Header extends Component {
     // });
   }
 
+  scrollToDiv = (id) => {
+    const ele = document.getElementById(id);
+    if (ele) {
+      ele.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   handleMenuItemClick = (id) => {
-    if (window.location.href === '/') {
-      const ele = document.getElementById(id);
-      if (ele) {
-        ele.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+    if (window.location.pathname !== '/') {
+      navigateTo('/');
+      setTimeout(() => {
+        this.scrollToDiv(id);
+      }, 200);
+    } else {
+      this.scrollToDiv(id);
     }
   };
 
