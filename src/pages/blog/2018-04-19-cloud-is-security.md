@@ -2,23 +2,36 @@
 title: Cloud is Security ++
 date: '2018-03-28T13:10:27+05:30'
 description: >-
-  We have been engaged with a number of clients who seek our help in getting on
-  to the Cloud. Often the conversations are predicated with their own
-  experiences on virtualization. Unfortunately, we find that most clients
-  struggle to understand the import of Cloud.
+  The last conversation we had was with a CEO friend of ours who was fuming that
+  he did not even know that there were major security loopholes in his ecommerce
+  website that hackers were having a field day with. He sounded betrayed that
+  the CTO would always bring up additional budgets citing some security related
+  requirement and him and the finance committee and even the Board would most
+  happily approve. All the presentations that the CISO, who reported to the CTO,
+  made called out the security apparatus (infrastructure, software, resources
+  etc.) as green in the umpteen meetings and presentations in those meetings.
+  How were he to know that these loopholes were there if the people who were
+  supposed to be looking into them were not even aware of them. He felt cheated.
+  He felt like an utter loser. He was in near tears.
 ---
-Here are three things we prompt our Clients towards when they begin their journey towards the Cloud:
+We hate getting prescriptive with our friends, unless they hire us with a particular mandate. However, in this particular case we did work with him to figure why he should reboot his technology environment by porting it to a third party cloud. Here are the reasons that made him make the switch: 
 
-## Cloud is business first and technology later
 
-It is in essence a model that assumes that you are ready to deploy pre-integrated services in the process wanting to benefit of available efficiencies and productivity gains. Cloud is at its heart a business think and not a technology think. What it means is that it requires CTOs to have a mindset shift from infrastructure towards business applications. There is also a mindset shift required from 100% customization to increased flexibility and efficiency of deployment.
 
-## Cloud is not a ‘Stack'
+## Clear access controls
 
-CTOs often showcase their Cloud to us prompting us towards virtualized infrastructure (HCI and IT automation)and taking immense pride in their Kubernetes at scale. This is classical case of missing the woods for the trees. These homegrown clouds or even third partner clouds become a ‘Stack’ only journey. This is such a waste. The primary idea behind Cloud is to get the business an edge by focusing on quick build outs of the applications.
+ Both physical and virtual delineation helps keep mission control data secure. The understanding of how and where the data resides is available with limited individuals within the organization. 
 
-## Cloud is about Developers
+## Expertise to respond to the dynamic threat environment
 
-No one who is an expert on Cloud will talk about storage, VMs, hardware, infrastructure etc. All these are a given for the modern Cloud ecosystem. We do not like to talk about these either for the same reason as we do not subscribe to the ‘Stack’ mentality. Cloud is about Developers and Business. Its about equipping the developers with world class infrastructure and best in class tools to rapidly create path-breaking applications for business.
+ Not all security related skill sets can be found within a single organization. Less so with small and medium sized businesses. More importantly, the threat landscape itself is ever changing with new threat vectors and threat strategies being deployed. The Cloud runs on the promise of delivering better and robust threat counter operations for its customers. 
 
-These three are also your gauge of who really understands the Cloud. Next time some one talks to you about the Cloud keep a watchful eye that they are not misleading you on the primary constructs.
+## Frequent review and audits
+
+You get an independent third party to look at how safe is your data, at least in the infrastructure. The cloud provider is not an appointee that deals with your technology team. Hence, there are no biases in reporting of their findings. 
+
+## Availability of data copies
+
+An individual business will not be in a position to create data redundancies. However, most cloud providers do that. They make copies and store your data in multiple locations. In the event of an untoward incident, you are quickly able to go into damage control mode and reset to previous good data.
+
+If your business is also sitting on the fence, field pertinent questions about the afore-mentioned reasons to your technology team.  Or get us to talk to them.
