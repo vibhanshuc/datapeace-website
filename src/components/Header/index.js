@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { navigateTo } from 'gatsby-link';
+import FaBars from 'react-icons/lib/fa/bars';
 import Menu from './Menu';
+import Sidenav from './Sidenav/Sidenav';
 import headerImage from './Banner.jpg';
 import './header.scss';
 
@@ -23,6 +25,10 @@ class Header extends Component {
     }
   };
 
+  openSidebar = () => {
+    this.sideNav.root.style.width = '300px';
+  };
+
   handleMenuItemClick = (id) => {
     if (window.location.pathname !== '/') {
       navigateTo('/');
@@ -40,7 +46,9 @@ class Header extends Component {
         className="header"
         style={{ backgroundImage: `url(${headerImage})` }}
       >
+        <FaBars className="sidenav-trigger" color={'#ffffff'} size={36} onClick={this.openSidebar}>|||</FaBars>
         <Menu onMenuItemClick={this.handleMenuItemClick} />
+        <Sidenav ref={node => this.sideNav = node} onMenuItemClick={this.handleMenuItemClick}/>
         {this.props.children}
       </div>
     );

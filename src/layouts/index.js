@@ -10,7 +10,7 @@ import './index.scss';
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
-      title="Data Peace"
+      title="Data Peace | We engineer your data journey"
       meta={[
         {
           name: 'description',
