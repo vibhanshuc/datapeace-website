@@ -1,0 +1,20 @@
+.BlogsList {
+  max-width: 960px;
+  margin: 0 auto;
+
+  &-item {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.Blog {
+  display: block;
+  margin-top: -200px;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  background: white;
+  box-shadow: 1px 2px 7px 1px rgba(0, 0, 0, 0.1);
+}

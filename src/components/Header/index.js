@@ -16,9 +16,11 @@ class Header extends Component {
   }
 
   handleMenuItemClick = (id) => {
-    const ele = document.getElementById(id);
-    if (ele) {
-      ele.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (window.location.href === '/') {
+      const ele = document.getElementById(id);
+      if (ele) {
+        ele.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
   };
 
@@ -29,10 +31,7 @@ class Header extends Component {
         style={{ backgroundImage: `url(${headerImage})` }}
       >
         <Menu onMenuItemClick={this.handleMenuItemClick} />
-        <div className="header-heading">
-          <h1>We engineer</h1>
-          <h1>your data journey</h1>
-        </div>
+        {this.props.children}
       </div>
     );
   }

@@ -1,6 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import Content, { HTMLContent } from '../components/Content';
+import Header from '../components/Header';
 
 export const BlogPostTemplate = ({
   content,
@@ -12,12 +13,12 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || Content;
 
   return (
-    <section className="section">
+    <section className="Blog">
       {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+      <div>
+        <div>
+          <div>
+            <h1 className="title">
               {title}
             </h1>
             <p>{description}</p>
@@ -29,17 +30,20 @@ export const BlogPostTemplate = ({
   );
 };
 
-export default props => {
+export default (props) => {
   const { markdownRemark: post } = props.data;
 
   return (
-    <BlogPostTemplate
-      content={post.htmlAst}
-      contentComponent={HTMLContent}
-      description={post.frontmatter.description}
-      helmet={<Helmet title={`Blog | ${post.frontmatter.title}`} />}
-      title={post.frontmatter.title}
-    />
+    <div>
+      <Header />
+      <BlogPostTemplate
+        content={post.htmlAst}
+        contentComponent={HTMLContent}
+        description={post.frontmatter.description}
+        helmet={<Helmet title={`Blog | ${post.frontmatter.title}`} />}
+        title={post.frontmatter.title}
+      />
+    </div>
   );
 };
 
