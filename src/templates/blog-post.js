@@ -1,6 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import Content, { HTMLContent } from '../components/Content';
+import BlogHeader from '../components/Blog/BlogHeader';
 import Header from '../components/Header';
 
 export const BlogPostTemplate = ({
@@ -9,6 +10,7 @@ export const BlogPostTemplate = ({
   description,
   title,
   helmet,
+  date,
 }) => {
   const PostContent = contentComponent || Content;
 
@@ -18,9 +20,7 @@ export const BlogPostTemplate = ({
       <div>
         <div>
           <div>
-            <h1 className="title">
-              {title}
-            </h1>
+            <BlogHeader title={title} date={date} />
             <p>{description}</p>
             <PostContent content={content} />
           </div>
@@ -43,6 +43,7 @@ export default (props) => {
           description={post.frontmatter.description}
           helmet={<Helmet title={`Blog | ${post.frontmatter.title}`} />}
           title={post.frontmatter.title}
+          date={post.frontmatter.date}
         />
       </div>
     </div>

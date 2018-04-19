@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import Header from '../../components/Header';
+import BlogHeader from '../../components/Blog/BlogHeader';
 import './index.scss';
 
 export default ({ data }) => (
@@ -13,18 +14,7 @@ export default ({ data }) => (
     <div className="BlogsList">
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <div className="BlogsList-item" key={node.id}>
-          <div className="flex">
-            <img src="/img/ravi.jpg" alt="avatar" />
-            <div className="BlogsList-item-header">
-              <div className="flex">
-                <h5>Ravi Naval</h5>
-                <h5>{node.frontmatter.date}</h5>
-              </div>
-              <h3>
-                {node.frontmatter.title}{' '}
-              </h3>
-            </div>
-          </div>
+          <BlogHeader title={node.frontmatter.title} date={node.frontmatter.date} />
           <p>{node.frontmatter.description}</p>
           <Link
             className="btn btn-primary"
