@@ -60,5 +60,16 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'Data Peace',
+        short_name: 'Data Peace',
+        start_url: '/',
+        background_color: '#f7f7f7',
+        theme_color: '#00c8c2',
+        display: 'minimal-ui',
+      },
+    },
   ],
 };
