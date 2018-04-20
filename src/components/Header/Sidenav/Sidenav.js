@@ -10,6 +10,7 @@ import './sidenav.scss';
 class Sidenav extends Component {
   closeNav = () => {
     this.root.style.width = '0';
+    this.root.classList.remove('open');
   };
   render() {
     const { onMenuItemClick } = this.props;

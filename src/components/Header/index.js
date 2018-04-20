@@ -27,6 +27,7 @@ class Header extends Component {
 
   openSidebar = () => {
     this.sideNav.root.style.width = '300px';
+    this.sideNav.root.classList.add('open');
   };
 
   handleMenuItemClick = (id) => {
@@ -46,9 +47,9 @@ class Header extends Component {
         className="header"
         style={{ backgroundImage: `url(${headerImage})` }}
       >
-        <FaBars className="sidenav-trigger" color={'#ffffff'} size={36} onClick={this.openSidebar}>|||</FaBars>
+        <FaBars className="sidenav-trigger" color="#ffffff" size={36} onClick={this.openSidebar}>|||</FaBars>
         <Menu onMenuItemClick={this.handleMenuItemClick} />
-        <Sidenav ref={node => this.sideNav = node} onMenuItemClick={this.handleMenuItemClick}/>
+        <Sidenav ref={node => this.sideNav = node} onMenuItemClick={this.handleMenuItemClick} />
         {this.props.children}
       </div>
     );

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import Content, { HTMLContent } from '../components/Content';
 import BlogHeader from '../components/Blog/BlogHeader';
@@ -30,25 +30,34 @@ export const BlogPostTemplate = ({
   );
 };
 
-export default (props) => {
-  const { markdownRemark: post } = props.data;
+export default class extends Component {
+  componentDidMount() {
+    setTimeout(() => {
+      this.node.classList.remove('down');
+    }, 50);
+  }
 
-  return (
-    <div>
-      <Header />
-      <div className="Blog">
-        <BlogPostTemplate
-          content={post.htmlAst}
-          contentComponent={HTMLContent}
-          description={post.frontmatter.description}
-          helmet={<Helmet title={`Blog | ${post.frontmatter.title}`} />}
-          title={post.frontmatter.title}
-          date={post.frontmatter.date}
-        />
+
+  render() {
+    const { markdownRemark: post } = this.props.data;
+
+    return (
+      <div>
+        <Header />
+        <div ref={(node) => { this.node = node; }} className="Blog down">
+          <BlogPostTemplate
+            content={post.htmlAst}
+            contentComponent={HTMLContent}
+            description={post.frontmatter.description}
+            helmet={<Helmet title={`Blog | ${post.frontmatter.title}`} />}
+            title={post.frontmatter.title}
+            date={post.frontmatter.date}
+          />
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 export const query = graphql`
   query BlogPostByID($id: String!) {
