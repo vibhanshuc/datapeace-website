@@ -30,7 +30,7 @@ const items = [
 
 const Client = ({ title, imageURL, description }) => (
   <div className="Client flex flex-col flex-center">
-    <img className="Client-logo" src={imageURL} />
+    <img alt={`${title} Logo`} className="Client-logo" src={imageURL} />
     {/* <h4 className="Client-name"> {title}</h4> */}
     <p className="Client-description">{description}</p>
   </div>

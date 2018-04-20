@@ -15,7 +15,7 @@ import './skills.scss';
 const SkillItem = ({ icon, title, description }) => (
   <div className="Skills-grid__item flex flex-50">
     <div className="Item-icon">
-      <img src={icon} />
+      <img alt={title} src={icon} />
     </div>
     <div className="flex flex-col flex-center">
       <div className="Item-title">
