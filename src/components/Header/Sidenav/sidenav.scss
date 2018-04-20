@@ -49,10 +49,20 @@
     font-size: 1.4rem;
     color: $lighter-grey-color;
     display: block;
-    transition: 0.3s;
+  }
+
+  a + svg {
+    fill: $light-grey-color;
+    opacity: 0;
+    transition: opacity 0.3s 0.3s;
   }
 }
 
+.sidenav.open {
+  a + svg {
+    opacity: 1;
+  }
+}
 
 .sidenav a:hover {
   color: #f1f1f1;

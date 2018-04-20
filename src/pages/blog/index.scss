@@ -19,6 +19,14 @@
   padding: 20px;
   background: white;
   box-shadow: 1px 2px 7px 1px rgba(0, 0, 0, 0.1);
+  transition-property: opacity, transform;
+  transition-duration: 500ms;
+  transition-timing-function: ease;
+
+  &.down {
+    opacity: 0;
+    transform: translateY(5000px);
+  }
 
   h2 {
     color: $dark-grey-color;
