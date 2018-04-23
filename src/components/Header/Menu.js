@@ -5,7 +5,7 @@ import logo from './logo.png';
 const Menu = ({ onMenuItemClick }) => (
   <div className="Menu">
     <h1 className="flex-100">
-      <Link className="Menu-item" href="/" to="/">
+      <Link className="Menu-item logo" href="/" to="/">
         <img
           alt="logo"
           height="80"
@@ -13,7 +13,7 @@ const Menu = ({ onMenuItemClick }) => (
         />
       </Link>
     </h1>
-    <div className="flex flex-100 flex-center flex-sb">
+    <div className="Menu-list flex flex-100 flex-center flex-sb">
       <button onClick={() => onMenuItemClick('services')} className="Menu-item">Our Services</button>
       <button onClick={() => onMenuItemClick('about')} className="Menu-item">About Us</button>
       <Link href="/blog" to="/blog" className="Menu-item">Blog</Link>

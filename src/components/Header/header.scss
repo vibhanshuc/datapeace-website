@@ -103,7 +103,16 @@
     outline: none;
   }
 
-  @include phone() {
-    display: none;
+  &-list {
+    @include phone {
+      display: none !important;
+    }
   }
+
+  .logo {
+    @include phone {
+      margin-left: 20px;
+    }
+  }
+
 }
