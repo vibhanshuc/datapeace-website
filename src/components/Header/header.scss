@@ -26,6 +26,10 @@
   background-size: cover;
   min-height: 400px;
 
+  @include phone {
+    min-height: 80px;
+  }
+
   &-heading {
     display: flex;
     flex-direction: column;
@@ -34,7 +38,7 @@
     padding: 150px;
 
     @include phone {
-      padding: 150px 5px;
+      padding: 80px 5px;
     }
 
     h1 {

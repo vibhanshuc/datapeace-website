@@ -1,12 +1,50 @@
 @import "../../layouts/variables";
+@import "../../layouts/mixins";
 
 .BlogsList {
   max-width: 960px;
   margin: 0 auto;
 
+  p {
+    line-height: 1.5;
+  }
+
+  a {
+    font-weight: 500;
+    text-decoration: none;
+    color: $dark-grey-color;
+  }
+
+  .ReadMore {
+    color: $primary-color !important;
+    font-weight: 500;
+    margin-left: 10px;
+    text-decoration: none;
+  }
+
   &-item {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    margin: 20px;
+    border-bottom: 1px solid #eeeeee;
+    position: relative;
+
+    &:after {
+      display: block;
+      content: "";
+      width: 7px;
+      height: 7px;
+      border: #E7EEF2 1px solid;
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      margin-left: -5px;
+      background: #FFF;
+      border-radius: 100%;
+      box-shadow: #FFF 0 0 0 5px;
+    }
+
+    @include phone {
+      margin-bottom: 50px;
+    }
   }
 }
 
@@ -22,6 +60,21 @@
   transition-property: opacity, transform;
   transition-duration: 500ms;
   transition-timing-function: ease;
+
+  p {
+    line-height: 1.5;
+  }
+
+  a {
+    font-weight: 500;
+    text-decoration: none;
+    color: $dark-grey-color;
+  }
+
+  @include phone {
+    margin-top: 0;
+    box-shadow: unset;
+  }
 
   &.down {
     opacity: 0;
