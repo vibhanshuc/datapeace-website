@@ -93,9 +93,9 @@
       }
 
       p {
-        text-align: justify;
         margin: 0;
-        color: $light-grey-color;
+        color: $dark-grey-color;
+        line-height: 1.5;
         text-transform: none;
 
         @include phone {
