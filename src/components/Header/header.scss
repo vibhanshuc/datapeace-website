@@ -30,6 +30,10 @@
     min-height: 80px;
   }
 
+  @include tablet {
+    min-height: 200px;
+  }
+
   &-heading {
     display: flex;
     flex-direction: column;
@@ -41,13 +45,17 @@
       padding: 80px 5px;
     }
 
+    @include tablet {
+      padding: 50px 5px;
+    }
+
     h1 {
       font-size: 5rem;
       color: $secondary-color;
       text-transform: uppercase;
 
       @include phone () {
-        font-size: 2.4rem;
+        font-size: 2.8rem;
       }
     }
 
@@ -55,7 +63,7 @@
       font-size: 5rem;
 
       @include phone () {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
       }
     }
 
@@ -105,6 +113,10 @@
 
   &-list {
     @include phone {
+      display: none !important;
+    }
+
+    @include tablet {
       display: none !important;
     }
   }
