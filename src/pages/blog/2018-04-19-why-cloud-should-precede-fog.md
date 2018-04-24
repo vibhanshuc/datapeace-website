@@ -1,5 +1,5 @@
 ---
-title: 'Why cloud should precede fog? '
+title: 'Why cloud should precede fog?'
 date: '2018-04-10T23:40:18+05:30'
 description: >-
   CTOs and CXOs in general get excited about the possibility of doing fog while

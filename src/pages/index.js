@@ -3,6 +3,7 @@ import './index.scss';
 import Header from '../components/Header';
 import Skills from '../components/Skills';
 import About from '../components/About';
+import Contact from '../components/Contact';
 
 const IndexPage = () => (
   <div>
@@ -23,6 +24,11 @@ const IndexPage = () => (
     <div className="dark-container padded" id="about">
       <div className="margin-auto">
         <About />
+      </div>
+    </div>
+    <div className="padded" id="contact">
+      <div className="margin-auto">
+        <Contact />
       </div>
     </div>
   </div>

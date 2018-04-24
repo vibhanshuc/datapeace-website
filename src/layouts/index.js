@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import 'prismjs/themes/prism-solarizedlight.css';
-import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
 import './index.scss';
@@ -30,11 +29,6 @@ const TemplateWrapper = ({ children }) => (
       ]}
     />
     <div>{children()}</div>
-    <div className="padded" id="contact">
-      <div className="margin-auto">
-        <Contact />
-      </div>
-    </div>
     <Footer />
   </div>
 );

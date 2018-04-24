@@ -18,7 +18,7 @@ export default ({ data }) => (
           <BlogHeader title={node.frontmatter.title} date={node.frontmatter.date} link={`/blog${node.fields.slug}`} />
           <p>{node.frontmatter.description}
             <Link
-                className="ReadMore"
+              className="ReadMore"
               to={`/blog${node.fields.slug}`}
               css={{ textDecoration: 'none', color: 'inherit' }}
             >
