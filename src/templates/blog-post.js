@@ -49,7 +49,7 @@ export default class extends Component {
             content={post.htmlAst}
             contentComponent={HTMLContent}
             description={post.frontmatter.description}
-            helmet={<Helmet title={`Blog | ${post.frontmatter.title}`} />}
+            helmet={<Helmet title={`Data Peace - Blog | ${post.frontmatter.title}`} />}
             title={post.frontmatter.title}
             date={post.frontmatter.date}
           />

@@ -1,12 +1,14 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import FaDoubleAngle from 'react-icons/lib/fa/angle-double-right';
+import Helmet from 'react-helmet';
 import Header from '../../components/Header';
 import BlogHeader from '../../components/Blog/BlogHeader';
 import './index.scss';
 
 export default ({ data }) => (
   <div>
+    <Helmet title="Data Peace | Blog" />
     <Header>
       <div className="header-heading">
         <h1>Blog</h1>
