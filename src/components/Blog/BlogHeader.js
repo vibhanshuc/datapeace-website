@@ -14,7 +14,7 @@ const BlogHeader = ({ date, title, link }) => (
           </Link>
       </h1>
       <div className="flex">
-        <h5>Ravi Naval</h5>
+        <h5>Data Peace Team</h5>
         <h5>{date}</h5>
       </div>
     </div>
