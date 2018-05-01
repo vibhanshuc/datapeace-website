@@ -20,6 +20,7 @@
 }
 
 .header {
+  position: relative;
   background-color: $primary-color;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -55,7 +56,7 @@
       text-transform: uppercase;
 
       @include phone () {
-        font-size: 2.8rem;
+        font-size: 2rem;
       }
     }
 
@@ -63,7 +64,7 @@
       font-size: 5rem;
 
       @include phone () {
-        font-size: 3.5rem;
+        font-size: 3rem;
       }
     }
 
@@ -89,9 +90,41 @@
       }
     }
   }
+
+  .aws-certification-banner {
+    position: absolute;
+    height: 30px;
+    right: -28px;
+    transform: rotate(33deg) translateX(67px);
+    top: 0;
+    padding: 0 74px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $secondary-color;
+
+    > img {
+      height: 80%;
+    }
+
+    @include phone {
+      position: relative;
+      transform: unset;
+      right: 0;
+      padding: 0;
+    }
+
+    @include tablet {
+      position: relative;
+      transform: unset;
+      right: 0;
+      padding: 0;
+    }
+  }
 }
 
 .Menu {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
