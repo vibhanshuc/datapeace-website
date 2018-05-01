@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import favicon from './favicon.jpg';
+import favicon from './favicon.png';
 
 let stylesStr;
 if (process.env.NODE_ENV === 'production') {
