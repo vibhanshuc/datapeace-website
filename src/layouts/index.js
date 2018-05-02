@@ -6,9 +6,12 @@ import Footer from '../components/Footer';
 
 import './index.scss';
 
-const TemplateWrapper = ({ children }) => (
+const TemplateWrapper = ({ data, children }) => (
   <div>
-    <Helmet />
+    <Helmet
+      title={data.site.siteMetadata.title}
+      meta={data.site.siteMetadata.meta}
+    />
     <div>{children()}</div>
     <Footer />
   </div>
@@ -19,3 +22,13 @@ TemplateWrapper.propTypes = {
 };
 
 export default TemplateWrapper;
+
+export const query = graphql`
+  query AboutQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`;
