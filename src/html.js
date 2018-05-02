@@ -18,7 +18,6 @@ const propTypes = {
   postBodyComponents: PropTypes.node.isRequired,
 };
 
-
 class HTML extends Component {
   render() {
     let css;
@@ -40,6 +39,10 @@ class HTML extends Component {
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
           <link rel="icon" type="image/png" href={favicon} />
+          <meta
+            name="google-site-verification"
+            content="s5QcjxYC14BvR6I8EoI57HoN3MBnuIUI3XHhk3BwsTs"
+          />
           {this.props.headComponents}
           {css}
         </head>
