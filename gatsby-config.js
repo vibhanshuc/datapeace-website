@@ -1,6 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Data Peace | We engineer your data journey',
+    description:
+      'We are focused on bringing the promise of the CLOUD and AI to all enterprises- sizes no bar! We work with our clients to create solutions that are optimal, sustainable and economical. We are adept at working with all varieties, velocities and volumes of data- an answer to evolving realties of modern day businesses. We have partnered with leading CLOUD ecosystems to craft successful CLOUD and data journeys for our clients.',
+    siteUrl: process.env.SITE_URL,
+    keywords: 'Computer Vision, Deep Learning, Machine Learning, Big Data, Analytics, Data Lake, AWS, GCP, AZURE',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

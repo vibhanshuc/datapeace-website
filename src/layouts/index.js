@@ -8,26 +8,7 @@ import './index.scss';
 
 const TemplateWrapper = ({ children }) => (
   <div>
-    <Helmet
-      title="Data Peace | We engineer your data journey"
-      meta={[
-        {
-          name: 'description',
-          content:
-            'We are focused on bringing the promise of the CLOUD and AI to all' +
-            ' enterprises- sizes no bar! We work with our clients to create solutions that are optimal,' +
-            ' sustainable and economical. We are adept at working with all varieties, velocities and' +
-            ' volumes of data- an answer to evolving realties of modern day businesses. We have partnered ' +
-            'with leading CLOUD ecosystems to craft successful CLOUD and data journeys for our clients. ',
-        },
-        {
-          name: 'keywords',
-          content:
-            'Computer Vision, Deep Learning, Machine Learning, Big Data, Analytics, Data Lake' +
-            ', AWS, GCP, AZURE',
-        },
-      ]}
-    />
+    <Helmet />
     <div>{children()}</div>
     <Footer />
   </div>

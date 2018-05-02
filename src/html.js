@@ -16,8 +16,6 @@ const propTypes = {
   body: PropTypes.node.isRequired,
   preBodyComponents: PropTypes.node.isRequired,
   postBodyComponents: PropTypes.node.isRequired,
-  bodyAttributes: PropTypes.node.isRequired,
-  htmlAttributes: PropTypes.string,
 };
 
 
@@ -33,7 +31,7 @@ class HTML extends Component {
       );
     }
     return (
-      <html lang="en-US" {...this.props.htmlAttributes}>
+      <html lang="en-US">
         <head>
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
@@ -45,7 +43,7 @@ class HTML extends Component {
           {this.props.headComponents}
           {css}
         </head>
-        <body {...this.props.bodyAttributes}>
+        <body>
           {this.props.preBodyComponents}
           <div
             key="body"
