@@ -5,7 +5,7 @@ import HighPerformanceComputingIcon from './Icons/HighPerformanceComputing.svg';
 import DataLakeImplementationIcon from './Icons/DataLakeImplementation.svg';
 import BigDataAnalyticsIcon from './Icons/BigDataAnalytics.svg';
 import MachineLearningIcon from './Icons/MachineLearning.svg';
-import RecommenderSystemsIcon from './Icons/RecommenderSystems.svg';
+import RecommendationSystemsIcon from './Icons/RecommenderSystems.svg';
 import NaturalLanguageProcessingIcon from './Icons/NaturalLanguageProcessing.svg';
 import ConversationalDialogueSystemsIcon from './Icons/ConversationalDialogueSystems.svg';
 import Heading from '../shared/Heading';
@@ -31,43 +31,43 @@ const CESItems = [
     title: 'Cloud Migration',
     icon: CloudMigrationIcon,
     description:
-      'We manage your journey to single cloud/ multi-cloud/ hybrid cloud ' +
+      'We manage your journey to single cloud/multi-cloud/hybrid cloud ' +
       'environments. We provide devops services, cloud migration services, ' +
-      'cloud application cloud native custom development and cloud ' +
+      'cloud application, cloud native custom development and cloud ' +
       'infrastructure transformation services.',
   },
   {
     title: 'Cloud Management',
     icon: CloudManagementIcon,
     description:
-      ' Once on the cloud we ensure that you achieve the desired outcomes' +
-      'with your data and applications parked there. We provision and' +
-      'maintain cloud- based architecture solutions employing' +
-      'micro-services, distributed database systems, load-balancing and' +
+      'Once on the cloud we ensure that you achieve the desired outcomes ' +
+      'with your data and applications parked there. We provision and ' +
+      'maintain cloud-based architecture solutions employing ' +
+      'micro-services, distributed database systems, load-balancing and ' +
       'caching.',
   },
   {
     title: 'High Performance Computing',
     icon: HighPerformanceComputingIcon,
     description:
-      'The cloud is useless if it is not equip you to do more with your' +
-      '            data. We build for you quality, well-documented, ouctome focused,' +
-      '            modularized software across processors, workstations and cloud' +
-      '            computing devices running the latest big data tool components.' +
-      '            Porting existing in-house or cloud based applications to Kubernetes' +
-      '            to scale them and reduce the running and maintenance cost.',
+      'The cloud is useless if it does not equip you to do more with your ' +
+      'data. We build for you quality, well-documented, outcome focused, ' +
+      'modularized software across processors, workstations and cloud ' +
+      'computing devices running the latest big data tool components. ' +
+      'Porting existing in-house or cloud based applications to Kubernetes ' +
+      'to scale them and reduce the running and maintenance cost. ',
   },
   {
     title: 'Data Lake Implementation',
     icon: DataLakeImplementationIcon,
     description:
-      'Don’t lose your data to want of better warehousing solutions. We are' +
-      '            experts in Data Lake implementations. This modern version of data' +
-      '            warehousing powered on clouds like AWS, Azure, Google Cloud will' +
-      '            ensure that ALL your data is available to you for posterity.' +
-      '            We are ready to cater to a world that will reside on multi-cloud' +
-      '            ecosystems. We are here to make the cloud a reality for ALL' +
-      '            businesses.',
+      'Don\'t lose your data to want of better warehousing solutions. We are ' +
+      'experts in Data Lake implementations. This modern version of data ' +
+      'warehousing powered on clouds like AWS, Azure, Google Cloud will ' +
+      'ensure that ALL your data is available to you for posterity. ' +
+      'We are ready to cater to a world that will reside on multi-cloud ' +
+      'ecosystems. We are here to make the cloud a reality for ALL ' +
+      'businesses.',
   },
 
 
@@ -78,9 +78,9 @@ const AIAASItems = [
     title: 'Machine Learning',
     icon: MachineLearningIcon,
     description:
-        'Use state-of-art machine learning techniques for classification,' +
-        '            regression and unsupervised learning problems. Pipelined models then' +
-        '            get deployed on software stacks.',
+        'Use state-of-art machine learning techniques for classification, ' +
+        'regression and unsupervised learning problems. Pipelined models then ' +
+        'get deployed on software stacks. ',
   },
   {
     title: 'Big Data Analytics',
@@ -91,11 +91,11 @@ const AIAASItems = [
         '            revenue and reduce costs.',
   },
   {
-    title: 'Recommender Systems',
-    icon: RecommenderSystemsIcon,
+    title: 'Recommendation Systems',
+    icon: RecommendationSystemsIcon,
     description:
-        'Build scalable recommender systems combining collaborative' +
-        '            filtering, content based filtering models and graph-based models to' +
+        'Build scalable recommendation systems combining collaborative' +
+        '            filtering, content based filtering models and graphical models to' +
         '            deliver domain specific recommendations.',
   },
   {
@@ -103,8 +103,8 @@ const AIAASItems = [
     icon: NaturalLanguageProcessingIcon,
     description:
         'Extract every ounce of information from textual and social media' +
-        '            data. Deploy mamed entity detection, keyword annotation, dependency' +
-        '            parsing, topic modeling to understand your data better.',
+        '            data. Deploy named entity detection, keyword annotation, dependency' +
+        '            parsing and topic modelling to understand your data better.',
   },
   {
     title: 'Conversational Dialogue Systems',
