@@ -11,18 +11,21 @@ const Menu = ({ onMenuItemClick, onTriggerClick }) => (
       size={36}
       onClick={onTriggerClick}
     />
-    <h1 className="flex-100">
+    <h1>
       <Link className="Menu-item logo" href="/" to="/">
         <img alt="logo" height="80" src={logo} />
       </Link>
     </h1>
-    <div className="Menu-list flex flex-100 flex-center flex-sb">
+    <div className="Menu-list flex flex-center flex-sb">
       <button onClick={() => onMenuItemClick('services')} className="Menu-item">
         Our Services
       </button>
       <button onClick={() => onMenuItemClick('about')} className="Menu-item">
         About Us
       </button>
+      <Link href="/careers" to="/careers" className="Menu-item">
+            Careers
+      </Link>
       <Link href="/blog" to="/blog" className="Menu-item">
         Blog
       </Link>

@@ -42,6 +42,9 @@ class Sidenav extends Component {
               <button onClick={() => onMenuItemClick('about')}>About us</button>
             </div>
             <div>
+              <Link href="/careers" to="/careers">Careers</Link>
+            </div>
+            <div>
               <Link href="/blog" to="/blog">Blog</Link>
             </div>
           </div>

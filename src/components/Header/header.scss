@@ -1,13 +1,13 @@
-@import "../../layouts/variables";
-@import "../../layouts/mixins";
+@import '../../layouts/variables';
+@import '../../layouts/mixins';
 
 .sticky {
-  width: 100%
+  width: 100%;
 }
 
 .fixed {
   position: fixed;
-  top:0;
+  top: 0;
 }
 
 .sticky.fixed {
@@ -25,6 +25,7 @@
   background-position: bottom;
   background-size: cover;
   min-height: 400px;
+  position: relative;
 
   @include phone {
     min-height: 80px;
@@ -41,6 +42,17 @@
     justify-content: center;
     padding: 150px;
 
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: linear-gradient($primary-color, pink);
+      opacity: 0.4;
+    }
+
     @include phone {
       padding: 80px 5px;
     }
@@ -53,8 +65,10 @@
       font-size: 5rem;
       color: $secondary-color;
       text-transform: uppercase;
+      text-align: center;
+      z-index: 1;
 
-      @include phone () {
+      @include phone() {
         font-size: 2rem;
       }
     }
@@ -62,13 +76,23 @@
     h1:first-of-type {
       font-size: 5rem;
 
-      @include phone () {
+      @include phone() {
         font-size: 3rem;
       }
     }
 
     h1:not(:first-of-type) {
       font-weight: 300;
+    }
+
+    &.small {
+      h1:not(:first-of-type) {
+        font-size: 2.5rem;
+
+        @include phone {
+          font-size: 1.5rem;
+        }
+      }
     }
   }
 
@@ -129,6 +153,7 @@
   align-items: center;
   margin: 0 auto;
   max-width: 960px;
+  z-index: 1;
 
   &-item {
     color: white;
@@ -141,6 +166,10 @@
     border: none;
     cursor: pointer;
     outline: none;
+
+    &.highlight {
+      color: #268bd2;
+    }
   }
 
   &-list {
@@ -158,5 +187,4 @@
       margin-left: 20px;
     }
   }
-
 }

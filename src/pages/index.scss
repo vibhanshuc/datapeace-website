@@ -49,6 +49,10 @@
     justify-content: center;
   }
 
+  &-end {
+    align-items: flex-end;
+  }
+
   &-sa {
     justify-content: space-around;
   }
@@ -134,4 +138,7 @@
 }
 .primary-text {
   color: $primary-color;
+}
+
+.careers {
 }

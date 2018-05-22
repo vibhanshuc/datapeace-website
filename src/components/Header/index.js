@@ -45,12 +45,12 @@ class Header extends Component {
     return (
       <div
         className="header"
-        style={{ backgroundImage: `url(${headerImage})` }}
+        style={{ backgroundImage: this.props.img ? `url(${this.props.img}), linear-gradient(#eb01a5, #d13531)` : `url(${headerImage}` }}
       >
         <div className="aws-certification-banner">
           <img src={awsCertifiedLogo} alt="aws certified" />
         </div>
-        <Menu onMenuItemClick={this.handleMenuItemClick} onTriggerClick={this.openSidebar}/>
+        <Menu onMenuItemClick={this.handleMenuItemClick} onTriggerClick={this.openSidebar} />
         <Sidenav ref={node => this.sideNav = node} onMenuItemClick={this.handleMenuItemClick} />
         {this.props.children}
       </div>

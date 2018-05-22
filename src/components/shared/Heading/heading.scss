@@ -6,6 +6,7 @@
   justify-content: center;
   text-transform: uppercase;
   position: relative;
+  margin-bottom: 20px;
 
   &.small {
     font-size: 1.5rem;
@@ -23,6 +24,7 @@
     left: 15%;
     color: $primary-color;
     height: 2px;
-    background-color: $primary-color;
+    background-image: linear-gradient($primary-color, pink);
+    opacity: 0.4;
   }
 }
