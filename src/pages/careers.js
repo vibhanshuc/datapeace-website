@@ -35,7 +35,7 @@ class Careers extends Component {
                   We encourage our people to dive in, roll up their sleeves and
                   take on the many opportunities bound to come their way. We
                   believe that in order to encourage an environment where
-                  technology thrives we must create one where employees too.
+                  technology thrives we must create one where employees thrive too.
                 </p>
 
                 <p>

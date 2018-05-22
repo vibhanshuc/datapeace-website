@@ -49,7 +49,7 @@
       right: 0;
       bottom: 0;
       left: 0;
-      background-image: linear-gradient($primary-color, pink);
+      background-image: linear-gradient(#268bd2, pink);
       opacity: 0.4;
     }
 
@@ -115,6 +115,7 @@
   }
 
   .aws-certification-banner {
+    z-index: 2;
     position: absolute;
     height: 30px;
     right: -28px;

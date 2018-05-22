@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { navigateTo } from 'gatsby-link';
 import Menu from './Menu';
 import Sidenav from './Sidenav/Sidenav';
-import headerImage from './Banner.jpg';
+import headerImage from './header.png';
 import awsCertifiedLogo from './AWS_Certified_Logo_294x230_Color.png';
 import './header.scss';
 
