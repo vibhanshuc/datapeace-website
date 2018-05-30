@@ -113,12 +113,12 @@ class Careers extends Component {
                   <li>Sense of how all of these things fit together</li>
                 </ul>
                 <div className="flex flex-col flex-center">
-                  <Heading title="Business Manager" isSmall isLighter />
+                  <Heading title="Operations Associate" isSmall isLighter />
                   <div>
                     <ul>
                       <li>Basic knowledge of Microsoft Products</li>
-                      <li> Primary & Secondary research capabilities.</li>
-                      <li> Sound Communication Skills</li>
+                      <li>Primary & Secondary research capabilities.</li>
+                      <li>Sound Communication Skills</li>
                       <li>
                         Candidates with content writing skills will be
                         preferred.
@@ -149,16 +149,16 @@ class Careers extends Component {
                     browserify, babel
                   </li>
 
-                  <li> Knowledge of versioning tool Git</li>
+                  <li>Knowledge of versioning tool Git</li>
 
                   <li>
                     Familiarity with Linux, basic knowledge of bash scripting
                     will be a plus
                   </li>
 
-                  <li> Basics of HTTP, REST</li>
+                  <li>Basics of HTTP, REST</li>
 
-                  <li> Know how of server side technologies work</li>
+                  <li>Know how of server side technologies work</li>
 
                   <li>
                     Basic knowledge of Cloud Infrastructure will be a plus (AWS,
