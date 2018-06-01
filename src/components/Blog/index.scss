@@ -2,6 +2,8 @@
 @import "../../layouts/mixins";
 
 .Blog {
+  position: relative;
+
   &-header {
     img {
       border-radius: 50%;

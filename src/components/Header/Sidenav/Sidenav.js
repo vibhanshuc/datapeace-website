@@ -21,7 +21,7 @@ class Sidenav extends Component {
         }}
         className="sidenav"
       >
-        <Link href="/" to="/">
+        <Link href="/" to="/" activeClassName="active">
           <img
             alt="logo"
             height="80"
@@ -36,16 +36,16 @@ class Sidenav extends Component {
         <div className="flex flex-col sidenav-wrapper">
           <div className="flex flex-col sidenav-menus">
             <div>
-              <button onClick={() => onMenuItemClick('services')}>Our services</button>
+              <button className="Menu-item" onClick={() => onMenuItemClick('services')}>Our services</button>
             </div>
             <div>
-              <button onClick={() => onMenuItemClick('about')}>About us</button>
+              <button className="Menu-item" onClick={() => onMenuItemClick('about')}>About us</button>
             </div>
             <div>
-              <Link href="/careers" to="/careers">Careers</Link>
+              <Link className="Menu-item" href="/careers" to="/careers" activeClassName="active">Careers</Link>
             </div>
             <div>
-              <Link href="/blog" to="/blog">Blog</Link>
+              <Link className="Menu-item" href="/blog" to="/blog" activeClassName="active">Blog</Link>
             </div>
           </div>
           <div className="flex flex-col flex-center">

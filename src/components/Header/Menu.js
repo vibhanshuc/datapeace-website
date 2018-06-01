@@ -12,7 +12,7 @@ const Menu = ({ onMenuItemClick, onTriggerClick }) => (
       onClick={onTriggerClick}
     />
     <h1>
-      <Link className="Menu-item logo" href="/" to="/">
+      <Link className="Menu-item logo" href="/" to="/" activeClassName="active">
         <img alt="logo" height="80" src={logo} />
       </Link>
     </h1>
@@ -23,10 +23,10 @@ const Menu = ({ onMenuItemClick, onTriggerClick }) => (
       <button onClick={() => onMenuItemClick('about')} className="Menu-item">
         About Us
       </button>
-      <Link href="/careers" to="/careers" className="Menu-item">
+      <Link href="/careers" to="/careers" className="Menu-item" activeClassName="active">
             Careers
       </Link>
-      <Link href="/blog" to="/blog" className="Menu-item">
+      <Link href="/blog" to="/blog" className="Menu-item" activeClassName="active">
         Blog
       </Link>
       <button

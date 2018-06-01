@@ -171,6 +171,15 @@
     &.highlight {
       color: #268bd2;
     }
+
+    &.active:not(.logo) {
+      font-weight: bold;
+      border-bottom: 1px solid white;
+    }
+
+    &:hover {
+      font-weight: bold;
+    }
   }
 
   &-list {
