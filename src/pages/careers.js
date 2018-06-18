@@ -87,7 +87,7 @@ class Careers extends Component {
           </div>
           <div className="flex flex-row flex-100">
             <div className="flex flex-col flex-100">
-              <div className="flex flex-col job-post">
+              <div className="flex flex-col  flex-center job-post">
                 <Heading title="Backend Engineer" isSmall isLighter />
                 <div>
                   <ul>
@@ -171,7 +171,7 @@ class Careers extends Component {
               </div>
             </div>
             <div className="flex flex-col">
-              <div className="flex flex-col job-post">
+              <div className="flex flex-col flex-center job-post">
                 <Heading title="Operations Associate" isSmall isLighter />
                 <div>
                   <ul>
@@ -184,7 +184,7 @@ class Careers extends Component {
                   </ul>
                 </div>
               </div>
-              <div className="flex flex-col job-post">
+              <div className="flex flex-col flex-center job-post">
                 <Heading title="Android Developer" isSmall isLighter />
                 <div>
                   <ul>
