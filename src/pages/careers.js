@@ -169,6 +169,29 @@ class Careers extends Component {
                   </ul>
                 </div>
               </div>
+              <div className="flex flex-col flex-center job-post">
+                <Heading title="Business Analyst" isSmall isLighter />
+                <div>
+                  <ul>
+                    <li>
+                      Written and verbal communication, including technical
+                      writing skills
+                    </li>
+
+                    <li>Understanding of systems engineering concepts</li>
+
+                    <li>
+                      Ability to learn and work in a fast paced environment
+                    </li>
+
+                    <li>The ability to conduct cost/benefit analysis</li>
+
+                    <li>Business case development</li>
+
+                    <li>Modeling techniques and methods Leadership</li>
+                  </ul>
+                </div>
+              </div>
             </div>
             <div className="flex flex-col">
               <div className="flex flex-col flex-center job-post">
@@ -244,6 +267,24 @@ class Careers extends Component {
                       Git
                     </li>
                     <li>Familiarity with continuous integration</li>
+                  </ul>
+                </div>
+              </div>
+              <div className="flex flex-col flex-center job-post">
+                <Heading title="Business Analyst (Intern)" isSmall isLighter />
+                <div>
+                  <ul>
+                    <li>
+                      Written and verbal communication, including technical
+                      writing skills
+                    </li>
+                    <li>Business development concepts</li>
+                    <li>Planning business strategies</li>
+                    <li>
+                      Ability to learn and work in a fast paced environment
+                    </li>
+                    <li>Business case development</li>
+
                   </ul>
                 </div>
               </div>
