@@ -3,7 +3,6 @@ import { navigateTo } from 'gatsby-link';
 import Menu from './Menu';
 import Sidenav from './Sidenav/Sidenav';
 import headerImage from './header.png';
-import awsCertifiedLogo from './AWS_Certified_Logo_294x230_Color.png';
 import './header.scss';
 
 class Header extends Component {
@@ -47,9 +46,6 @@ class Header extends Component {
         className="header"
         style={{ backgroundImage: this.props.img ? `url(${this.props.img}), linear-gradient(#eb01a5, #d13531)` : `url(${headerImage}` }}
       >
-        <div className="aws-certification-banner">
-          <img src={awsCertifiedLogo} alt="aws certified" />
-        </div>
         <Menu onMenuItemClick={this.handleMenuItemClick} onTriggerClick={this.openSidebar} />
         <Sidenav ref={node => this.sideNav = node} onMenuItemClick={this.handleMenuItemClick} />
         {this.props.children}
