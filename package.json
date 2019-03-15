@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "dotenv": "^7.0.0",
     "gatsby": "^1.9.253",
     "gatsby-link": "^1.6.41",
     "gatsby-plugin-glamor": "^1.6.13",
