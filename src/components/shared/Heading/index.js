@@ -8,7 +8,8 @@ const Heading = ({ title, isSmall, isLighter }) =>
       className={`heading ${isSmall ? 'small' : ''} ${isLighter ? 'lighter' : ''}`}
     >
       {title}
-    </h2>);
+    </h2>
+);
 
 Heading.propTypes = {
   title: PropTypes.string.isRequired,

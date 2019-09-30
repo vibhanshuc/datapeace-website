@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { arrayOf, shape, string } from 'prop-types';
 import CloudMigrationIcon from './Icons/CloudMigration.svg';
 import CloudManagementIcon from './Icons/CloudManagement.svg';
 import HighPerformanceComputingIcon from './Icons/HighPerformanceComputing.svg';
@@ -9,7 +10,6 @@ import RecommendationSystemsIcon from './Icons/RecommenderSystems.svg';
 import NaturalLanguageProcessingIcon from './Icons/NaturalLanguageProcessing.svg';
 import ConversationalDialogueSystemsIcon from './Icons/ConversationalDialogueSystems.svg';
 import Heading from '../shared/Heading';
-
 import './skills.scss';
 
 const SkillItem = ({ icon, title, description }) => (
@@ -25,6 +25,12 @@ const SkillItem = ({ icon, title, description }) => (
     </div>
   </div>
 );
+
+SkillItem.propTypes = {
+  icon: string.isRequired,
+  title: string.isRequired,
+  description: string.isRequired,
+};
 
 const CESItems = [
   {
@@ -61,7 +67,7 @@ const CESItems = [
     title: 'Data Lake Implementation',
     icon: DataLakeImplementationIcon,
     description:
-      'Don\'t lose your data to want of better warehousing solutions. We are ' +
+      "Don't lose your data to want of better warehousing solutions. We are " +
       'experts in Data Lake implementations. This modern version of data ' +
       'warehousing powered on clouds like AWS, Azure, Google Cloud will ' +
       'ensure that ALL your data is available to you for posterity. ' +
@@ -69,8 +75,6 @@ const CESItems = [
       'ecosystems. We are here to make the cloud a reality for ALL ' +
       'businesses.',
   },
-
-
 ];
 
 const AIAASItems = [
@@ -78,99 +82,103 @@ const AIAASItems = [
     title: 'Machine Learning',
     icon: MachineLearningIcon,
     description:
-        'Use state-of-art machine learning techniques for classification, ' +
-        'regression and unsupervised learning problems. Pipelined models then ' +
-        'get deployed on software stacks. ',
+      'Use state-of-art machine learning techniques for classification, ' +
+      'regression and unsupervised learning problems. Pipelined models then ' +
+      'get deployed on software stacks. ',
   },
   {
     title: 'Big Data Analytics',
     icon: BigDataAnalyticsIcon,
     description:
-        'Gain insights from your data. Uncover data, forecast future events' +
-        '            and take steps based on sound statistical reasoning to maximize your' +
-        '            revenue and reduce costs.',
+      'Gain insights from your data. Uncover data, forecast future events' +
+      '            and take steps based on sound statistical reasoning to maximize your' +
+      '            revenue and reduce costs.',
   },
   {
     title: 'Recommendation Systems',
     icon: RecommendationSystemsIcon,
     description:
-        'Build scalable recommendation systems combining collaborative' +
-        '            filtering, content based filtering models and graphical models to' +
-        '            deliver domain specific recommendations.',
+      'Build scalable recommendation systems combining collaborative' +
+      '            filtering, content based filtering models and graphical models to' +
+      '            deliver domain specific recommendations.',
   },
   {
     title: 'Natural Language Processing',
     icon: NaturalLanguageProcessingIcon,
     description:
-        'Extract every ounce of information from textual and social media' +
-        '            data. Deploy named entity detection, keyword annotation, dependency' +
-        '            parsing and topic modelling to understand your data better.',
+      'Extract every ounce of information from textual and social media' +
+      '            data. Deploy named entity detection, keyword annotation, dependency' +
+      '            parsing and topic modelling to understand your data better.',
   },
   {
     title: 'Conversational Dialogue Systems',
     icon: ConversationalDialogueSystemsIcon,
     description:
-        'We build chatbots that provide deep first touch-points for your' +
-        '            customers. Our bots embedded with deep understanding of your' +
-        '            industry and organization focus on providing near human interface' +
-        '            experience to your users. When we think of Machine Learning and AI' +
-        '            we think of complexities and prohibitive costs. Data Peace is bent' +
-        '            on making AI accessible to all. More so to small businesses who will' +
-        '            benefit most from it.',
+      'We build chatbots that provide deep first touch-points for your' +
+      '            customers. Our bots embedded with deep understanding of your' +
+      '            industry and organization focus on providing near human interface' +
+      '            experience to your users. When we think of Machine Learning and AI' +
+      '            we think of complexities and prohibitive costs. Data Peace is bent' +
+      '            on making AI accessible to all. More so to small businesses who will' +
+      '            benefit most from it.',
   },
 ];
 
 class SkillGroup extends Component {
-    state = {
-      activeIndex: 0,
-    };
+  static propTypes = {
+    items: arrayOf(shape({})).isRequired,
+    title: string.isRequired,
+  };
 
+  state = {
+    activeIndex: 0,
+  };
 
-    handleLinkClick = (index) => {
-      this.setState({
-        activeIndex: index,
-      });
-    };
+  handleLinkClick = index => {
+    this.setState({
+      activeIndex: index,
+    });
+  };
 
-    render() {
-      const { items, title } = this.props;
-      const { activeIndex } = this.state;
-      const activeItem = items[activeIndex];
-      return (
-        <div className="Skills-group flex flex-col">
-          <div className="Skills-group-heading flex flex-center">
-            <Heading title={title} isSmall isLighter />
+  render() {
+    const { items, title } = this.props;
+    const { activeIndex } = this.state;
+    const activeItem = items[activeIndex];
+    return (
+      <div className="Skills-group flex flex-col">
+        <div className="Skills-group-heading flex flex-center">
+          <Heading title={title} isSmall isLighter />
+        </div>
+        <div className="flex">
+          <div className="Skills-link-list flex-40">
+            {items.map((item, index) => (
+              <div
+                key={index}
+                className={`Skills-link ${
+                  index === activeIndex ? 'active' : ''
+                }`}
+                onMouseEnter={() => this.handleLinkClick(index)}
+              >
+                <div>{item.title}</div>
+                <SkillItem
+                  title={item.title}
+                  icon={item.icon}
+                  description={item.description}
+                />
+              </div>
+            ))}
           </div>
-          <div className="flex">
-            <div className="Skills-link-list flex-40">
-              {items.map((item, index) => (
-                <div
-                  key={index}
-                  className={`Skills-link ${index === activeIndex ? 'active' : ''}`}
-                  onMouseEnter={() => this.handleLinkClick(index)}
-                >
-                  <div>{item.title}</div>
-                  <SkillItem
-                    title={item.title}
-                    icon={item.icon}
-                    description={item.description}
-                  />
-                </div>
-                ))}
-            </div>
-            <div
-              className="Skills-active flex-60"
-            >
-              <SkillItem
-                title={activeItem.title}
-                icon={activeItem.icon}
-                description={activeItem.description}
-              />
-            </div>
+          <div className="Skills-active flex-60">
+            <SkillItem
+              title={activeItem.title}
+              icon={activeItem.icon}
+              description={activeItem.description}
+            />
           </div>
         </div>
-      );
-    }
+      </div>
+    );
+  }
 }
 
 const Skills = () => (
@@ -181,11 +189,11 @@ const Skills = () => (
     <div className="flex flex-col flex-center Skills-description">
       <p>We deliver the promise of the Cloud for your business.</p>
       <p>
-            We ensure that you not only experience great technology but also
-            remarkable business outcomes.
+        We ensure that you not only experience great technology but also
+        remarkable business outcomes.
       </p>
     </div>
-    <div className="Skills-grid flex-col" >
+    <div className="Skills-grid flex-col">
       <SkillGroup title="Cloud Enablement Services" items={CESItems} />
       <SkillGroup title="AI Enablement Services" items={AIAASItems} />
     </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
-import FaBars from 'react-icons/lib/fa/bars';
+import { FaBars } from 'react-icons/fa';
+import { func } from 'prop-types';
 import logo from './logo.png';
 
 const Menu = ({ onMenuItemClick, onTriggerClick }) => (
@@ -17,19 +18,38 @@ const Menu = ({ onMenuItemClick, onTriggerClick }) => (
       </Link>
     </h1>
     <div className="Menu-list flex flex-center flex-sb">
-      <button onClick={() => onMenuItemClick('services')} className="Menu-item">
+      <button
+        type="button"
+        onClick={() => onMenuItemClick('services')}
+        className="Menu-item"
+      >
         Our Services
       </button>
-      <button onClick={() => onMenuItemClick('about')} className="Menu-item">
+      <button
+        type="button"
+        onClick={() => onMenuItemClick('about')}
+        className="Menu-item"
+      >
         About Us
       </button>
-      <Link href="/careers" to="/careers" className="Menu-item" activeClassName="active">
-            Careers
+      <Link
+        href="/careers"
+        to="/careers"
+        className="Menu-item"
+        activeClassName="active"
+      >
+        Careers
       </Link>
-      <Link href="/blog" to="/blog" className="Menu-item" activeClassName="active">
+      <Link
+        href="/blog"
+        to="/blog"
+        className="Menu-item"
+        activeClassName="active"
+      >
         Blog
       </Link>
       <button
+        type="button"
         onClick={() => onMenuItemClick('contact')}
         className="Menu-item btn animated-button thar-one"
       >
@@ -38,5 +58,10 @@ const Menu = ({ onMenuItemClick, onTriggerClick }) => (
     </div>
   </div>
 );
+
+Menu.propTypes = {
+  onMenuItemClick: func.isRequired,
+  onTriggerClick: func.isRequired,
+};
 
 export default Menu;

@@ -1,10 +1,12 @@
 import React from 'react';
-import MapMarker from 'react-icons/lib/fa/map-marker';
-import FaPhone from 'react-icons/lib/fa/phone';
-import MdEmail from 'react-icons/lib/md/email';
-import FaFacebook from 'react-icons/lib/fa/facebook';
-import FaTwitter from 'react-icons/lib/fa/twitter';
-import FaLinkedin from 'react-icons/lib/fa/linkedin';
+import { MdEmail } from 'react-icons/md';
+import {
+  FaMapMarker,
+  FaPhone,
+  FaFacebook,
+  FaTwitter,
+  FaLinkedin,
+} from 'react-icons/fa';
 import DataPeaceMap from './map';
 import './contact.scss';
 
@@ -22,10 +24,10 @@ const Contact = () => (
         <div>
           <div className="Contact-line flex">
             <div>
-              <MapMarker />
+              <FaMapMarker />
             </div>
             <address>
-                Two Horizon Center, DLF Phase 5, Gurugram, Haryana 122002, India
+              Two Horizon Center, DLF Phase 5, Gurugram, Haryana 122002, India
             </address>
           </div>
           <div className="Contact-line flex">
@@ -46,13 +48,25 @@ const Contact = () => (
           </div>
         </div>
         <div className="Contact-social flex flex-center">
-          <a rel="noopener noreferrer" target="_blank" href="https://www.facebook.com/datapeaceai">
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://www.facebook.com/datapeaceai"
+          >
             <FaFacebook />
           </a>
-          <a rel="noopener noreferrer" target="_blank" href="https://twitter.com/datapeaceai">
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://twitter.com/datapeaceai"
+          >
             <FaTwitter />
           </a>
-          <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/company/13704845/">
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://www.linkedin.com/company/13704845/"
+          >
             <FaLinkedin />
           </a>
         </div>

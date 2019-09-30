@@ -9,17 +9,17 @@ module.exports = {
       {
         name: 'description',
         content:
-                  'We are focused on bringing the promise of the CLOUD and AI to all' +
-                  ' enterprises- sizes no bar! We work with our clients to create solutions that are optimal,' +
-                  ' sustainable and economical. We are adept at working with all varieties, velocities and' +
-                  ' volumes of data- an answer to evolving realties of modern day businesses. We have partnered ' +
-                  'with leading CLOUD ecosystems to craft successful CLOUD and data journeys for our clients. ',
+          'We are focused on bringing the promise of the CLOUD and AI to all' +
+          ' enterprises- sizes no bar! We work with our clients to create solutions that are optimal,' +
+          ' sustainable and economical. We are adept at working with all varieties, velocities and' +
+          ' volumes of data- an answer to evolving realities of modern day businesses. We have partnered ' +
+          'with leading CLOUD ecosystems to craft successful CLOUD and data journeys for our clients. ',
       },
       {
         name: 'keywords',
         content:
-                  'Computer Vision, Deep Learning, Machine Learning, Big Data, Analytics, Data Lake' +
-                  ', AWS, GCP, AZURE',
+          'Computer Vision, Deep Learning, Machine Learning, Big Data, Analytics, Data Lake' +
+          ', AWS, GCP, AZURE',
       },
     ],
     siteUrl: process.env.SITE_URL,
@@ -34,7 +34,6 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
-    'gatsby-plugin-glamor',
     // {
     //   resolve: 'gatsby-plugin-typography',
     //   options: {

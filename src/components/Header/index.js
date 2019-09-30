@@ -1,11 +1,21 @@
 import React, { Component } from 'react';
-import { navigateTo } from 'gatsby-link';
+import { navigate } from 'gatsby-link';
+import { node, string } from 'prop-types';
 import Menu from './Menu';
 import Sidenav from './Sidenav/Sidenav';
 import headerImage from './header.png';
 import './header.scss';
 
 class Header extends Component {
+  static propTypes = {
+    img: string,
+    children: node.isRequired,
+  };
+
+  static defaultProps = {
+    img: undefined,
+  };
+
   componentDidMount() {
     // window.addEventListener('scroll', () => {
     //   const sticky = this.menu.offsetTop + this.menu.clientHeight;
@@ -17,7 +27,7 @@ class Header extends Component {
     // });
   }
 
-  scrollToDiv = (id) => {
+  scrollToDiv = id => {
     const ele = document.getElementById(id);
     if (ele) {
       ele.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -29,9 +39,9 @@ class Header extends Component {
     this.sideNav.root.classList.add('open');
   };
 
-  handleMenuItemClick = (id) => {
+  handleMenuItemClick = id => {
     if (window.location.pathname !== '/') {
-      navigateTo('/');
+      navigate('/');
       setTimeout(() => {
         this.scrollToDiv(id);
       }, 200);
@@ -41,14 +51,27 @@ class Header extends Component {
   };
 
   render() {
+    const { img, children } = this.props;
     return (
       <div
         className="header"
-        style={{ backgroundImage: this.props.img ? `url(${this.props.img}), linear-gradient(#eb01a5, #d13531)` : `url(${headerImage}` }}
+        style={{
+          backgroundImage: img
+            ? `url(${img}), linear-gradient(#eb01a5, #d13531)`
+            : `url(${headerImage}), linear-gradient(#eb01a5, #d13531)`,
+        }}
       >
-        <Menu onMenuItemClick={this.handleMenuItemClick} onTriggerClick={this.openSidebar} />
-        <Sidenav ref={node => this.sideNav = node} onMenuItemClick={this.handleMenuItemClick} />
-        {this.props.children}
+        <Menu
+          onMenuItemClick={this.handleMenuItemClick}
+          onTriggerClick={this.openSidebar}
+        />
+        <Sidenav
+          ref={ref => {
+            this.sideNav = ref;
+          }}
+          onMenuItemClick={this.handleMenuItemClick}
+        />
+        {children}
       </div>
     );
   }

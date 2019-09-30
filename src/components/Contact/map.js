@@ -1,30 +1,13 @@
 import React from 'react';
-import { compose, withProps } from 'recompose';
-import {
-  withScriptjs,
-  withGoogleMap,
-  GoogleMap,
-  Marker,
-} from 'react-google-maps';
 
-const MapComponent = compose(
-  withProps({
-    googleMapURL:
-      `https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_API_KEY}&v=3.exp&libraries=geometry,drawing,places`,
-    loadingElement: <div style={{ height: '100%' }} />,
-    containerElement: <div style={{ height: '350px' }} />,
-    mapElement: <div style={{ height: '100%' }} />,
-    center: { lat: 28.4510685, lng: 77.09644070000002 },
-  }),
-  withScriptjs,
-  withGoogleMap,
-)(props => (
-  <GoogleMap
-    defaultZoom={14}
-    defaultCenter={props.center}
-  >
-    {props.isMarkerShown && <Marker position={props.center} />}
-  </GoogleMap>
-));
+const MapComponent = () => (
+  <iframe
+    title="datapeace-google-map"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.11517697161!2d77.26830041545303!3d28.53625759518177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce1c7fa2bf371%3A0x1314faedc881fbd1!2sData+Peace+AI+Technologies+Pvt.+Ltd.!5e0!3m2!1sen!2sin!4v1558344955884!5m2!1sen!2sin"
+    frameBorder="0"
+    style={{ border: 0, width: '100%', height: '100%' }}
+    allowFullScreen
+  />
+);
 
 export default () => <MapComponent isMarkerShown />;

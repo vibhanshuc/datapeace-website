@@ -1,16 +1,17 @@
 {
   "parser": "babel-eslint",
-  "extends": "airbnb",
+  "extends": ["airbnb", "eslint-config-prettier"],
   "plugins": [
     "react",
     "jsx-a11y",
     "import"
   ],
-  "globals": {
-    "graphql": false
+  "env": {
+    "browser": true
   },
   "rules": {
     "react/jsx-filename-extension": "off",
+    "react/no-array-index-key": "off",
     "linebreak-style": ["off"]
   }
 }

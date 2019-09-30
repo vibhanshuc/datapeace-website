@@ -1,4 +1,5 @@
 import React from 'react';
+import { string } from 'prop-types';
 import Heading from '../shared/Heading';
 import './clients.scss';
 
@@ -12,13 +13,22 @@ const Client = ({ title, imageURL, description }) => (
   </div>
 );
 
+Client.propTypes = {
+  title: string.isRequired,
+  imageURL: string.isRequired,
+  description: string.isRequired,
+};
+
 const Clients = () => (
   <div className="Clients">
     <div className="Clients-heading flex flex-center">
       <Heading title="Our Clients" />
     </div>
     <div className="Clients-list flex flex-center">
-      {items.map((item, index) => <Client key={index} {...item} />)}
+      {items.map((item, index) => (
+        // eslint-disable-next-line react/no-array-index-key
+        <Client key={index} {...item} />
+      ))}
     </div>
   </div>
 );
