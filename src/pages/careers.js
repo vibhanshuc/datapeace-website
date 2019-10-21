@@ -80,12 +80,12 @@ function Careers() {
         </div>
       </div>
       <div className="careers-section padded careers-jobs">
-        <div className="flex flex-center">
+        <div className="flex flex-center mb-40">
           <Heading title="Job Profiles" />
         </div>
         <div className="flex flex-row flex-100">
           <div className="flex flex-col flex-100">
-            <div className="flex flex-col  flex-center job-post">
+            <div className="job-post">
               <Heading title="Backend Engineer" isSmall isLighter />
               <div>
                 <ul>
@@ -99,7 +99,6 @@ function Careers() {
                   </li>
                   <li>SQL, NoSQL databases</li>
                   <li>Git (Basic)</li>
-                  <li>Pandas, Scipy, Spark, Hadoop (Basic Knowledge)</li>
                   <li>
                     Familiarity with Linux, basic knowledge of bash scripting
                     will be a plus
@@ -110,11 +109,13 @@ function Careers() {
                     Basic knowledge of Cloud Infrastructure (AWS, AZURE or
                     Google Cloud)
                   </li>
+                  <li>Basic knowledge of Pandas, Scipy, Spark, Hadoop will be a plus</li>
                   <li>Sense of how all of these things fit together</li>
                 </ul>
               </div>
             </div>
-            <div className="flex flex-col flex-center job-post">
+
+            <div className="job-post">
               <Heading title="Frontend Engineer" isSmall isLighter />
               <div>
                 <ul>
@@ -167,30 +168,8 @@ function Careers() {
                 </ul>
               </div>
             </div>
-            <div className="flex flex-col flex-center job-post">
-              <Heading title="Business Analyst" isSmall isLighter />
-              <div>
-                <ul>
-                  <li>
-                    Written and verbal communication, including technical
-                    writing skills
-                  </li>
 
-                  <li>Understanding of systems engineering concepts</li>
-
-                  <li>Ability to learn and work in a fast paced environment</li>
-
-                  <li>The ability to conduct cost/benefit analysis</li>
-
-                  <li>Business case development</li>
-
-                  <li>Modeling techniques and methods Leadership</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col">
-            <div className="flex flex-col flex-center job-post">
+            <div className="job-post">
               <Heading title="Operations Associate" isSmall isLighter />
               <div>
                 <ul>
@@ -203,68 +182,8 @@ function Careers() {
                 </ul>
               </div>
             </div>
-            <div className="flex flex-col flex-center job-post">
-              <Heading title="Android Developer" isSmall isLighter />
-              <div>
-                <ul>
-                  <li>
-                    Translate designs and wireframes into high quality code
-                  </li>
-                  <li>
-                    Design, build, and maintain high performance, reusable, and
-                    reliable Java code
-                  </li>
-                  <li>
-                    Ensure the best possible performance, quality, and
-                    responsiveness of the application
-                  </li>
-                  <li>Identify and correct bottlenecks and fix bugs</li>
-                  <li>
-                    Help maintain code quality, organization, and automatization
-                  </li>
-                  <li>
-                    Strong knowledge of Android SDK, different versions of
-                    Android, and how to deal with different screen sizes
-                  </li>
-                  <li>
-                    Familiarity with RESTful APIs to connect Android
-                    applications to back-end services
-                  </li>
-                  <li>
-                    Strong knowledge of Android UI design principles, patterns,
-                    and best practices
-                  </li>
-                  <li>
-                    Good experience of audio/video functionalities and libraries
-                  </li>
-                  <li>
-                    Experience with offline storage, threading, and performance
-                    tuning
-                  </li>
-                  <li>
-                    Ability to design applications around natural user
-                    interfaces, such as “touch”
-                  </li>
-                  <li>
-                    Knowledge of the open-source Android ecosystem and the
-                    libraries available for common tasks
-                  </li>
-                  <li>
-                    Familiarity with cloud message APIs and push notifications
-                  </li>
-                  <li>
-                    Understanding of Google’s Android design principles and
-                    interface guidelines
-                  </li>
-                  <li>
-                    Proficient understanding of code versioning tools, such as
-                    Git
-                  </li>
-                  <li>Familiarity with continuous integration</li>
-                </ul>
-              </div>
-            </div>
-            <div className="flex flex-col flex-center job-post">
+            
+            <div className="job-post">
               <Heading title="Business Analyst (Intern)" isSmall isLighter />
               <div>
                 <ul>

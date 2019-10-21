@@ -1,5 +1,5 @@
-@import "../layouts/variables";
-@import "../layouts/mixins";
+@import '../layouts/variables';
+@import '../layouts/mixins';
 
 .careers {
   &-section {
@@ -16,10 +16,6 @@
   }
 
   &-jobs {
-    > h2 {
-      margin-bottom: 40px;
-    }
-
     @include phone {
       > div {
         flex-direction: column;
@@ -27,8 +23,8 @@
     }
   }
 
-
-  p, ul {
+  p,
+  ul {
     color: $dark-grey-color;
     line-height: 1.5;
     font-size: $base-font-size * 1.3;
@@ -40,16 +36,17 @@
     text-align: center;
     padding: 50px;
   }
-
-
 }
 
 .apply-button {
   padding: 15px 30px;
   background-color: $primary-color;
   border: none;
-  -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);  font-size: $large-font-size;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  font-size: $large-font-size;
   color: $secondary-color;
   cursor: pointer;
   text-decoration: none;
@@ -65,9 +62,15 @@
 
 .job-post {
   padding: 20px 5px;
+  margin-bottom: 20px;
 
   @include phone {
-    padding: 0;
+    padding: 5px;
     width: auto;
+
+    h2 {
+      display: flex;
+      justify-content: center;
+    }
   }
 }
